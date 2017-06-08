@@ -58,17 +58,17 @@
       <SharePointProjectItemId>{927b5575-c92c-489f-a4df-b1af10c94379}</SharePointProjectItemId>
     </None>
     <Content Include="Scripts\Elements.xml" />
-    <Content Include="Scripts\App.js" />
+    <Content Include="Scripts\app.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7159ba7e-3294-4248-86ba-c864c5ad7ea1}</SharePointProjectItemId>
     </None>
     <Content Include="Content\Elements.xml" />
-    <Content Include="Content\App.css" />
+    <Content Include="Content\app.css" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\AppIcon.png">
+    <Content Include="Images\appicon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
     <Content Include="Images\Elements.xml" />
