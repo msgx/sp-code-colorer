@@ -83,11 +83,11 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="Features\SPCodeColorerFeature\SPCodeColorerFeature.feature">
       <FeatureId>{cb531a39-97da-4b8a-b1d8-9e7094430c08}</FeatureId>
     </None>
-    <None Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <None Include="Features\SPCodeColorerFeature\SPCodeColorerFeature.Template.xml">
+      <DependentUpon>SPCodeColorerFeature.feature</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
