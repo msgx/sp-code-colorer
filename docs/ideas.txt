@@ -42,3 +42,5 @@ Do we need to wrap HTML-version of generated code with <code> tag?
 - How to implement: dedicated page.
   BTW, Default.aspx is quite a good option: we can show help/how-to on the page for all users, adding "Configure" link for admins only.
   Of course Admin.aspx should also check if user has web administrator rights on the site.
+
+How to update DataURL links for the icons? Gulp? On demand / automatically
