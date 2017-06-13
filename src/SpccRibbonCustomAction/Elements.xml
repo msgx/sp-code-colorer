@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<CustomAction Id="SpccRibbonCustomAction" Location="CommandUI.Ribbon">
+	<CustomAction
+		Id="SpccRibbonCustomAction"
+		Location="CommandUI.Ribbon"
+		Title="Code Colorer"
+		HostWebDialog="true"
+		HostWebDialogWidth="500"
+		HostWebDialogHeight="320">
 		<CommandUIExtension>
 			<CommandUIDefinitions>
 				<CommandUIDefinition Location="Ribbon.Templates._children">
@@ -39,7 +45,7 @@
 				</CommandUIDefinition>
 			</CommandUIDefinitions>
 			<CommandUIHandlers>
-				<CommandUIHandler Command="spccOpenCodeColorer" CommandAction="https://google.com" />
+				<CommandUIHandler Command="spccOpenCodeColorer" CommandAction="~appWebUrl/Pages/Colorer.aspx?{StandardTokens}&amp;IsDlg=1" />
 			</CommandUIHandlers>
 		</CommandUIExtension >
 	</CustomAction>

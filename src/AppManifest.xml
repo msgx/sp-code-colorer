@@ -3,7 +3,7 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="SPCodeColorer" ProductID="{99e532ed-cc8c-45ec-89f3-5ea0262b77ff}" Version="1.0.0.0" SharePointMinVersion="15.0.0.0">
 	<Properties>
 		<Title>SPCodeColorer</Title>
-		<StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
+		<StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}&amp;IsDlg=0</StartPage>
 	</Properties>
 	<AppPrincipal>
 		<Internal />

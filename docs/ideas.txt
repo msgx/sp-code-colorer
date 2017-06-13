@@ -44,3 +44,8 @@ Do we need to wrap HTML-version of generated code with <code> tag?
   Of course Admin.aspx should also check if user has web administrator rights on the site.
 
 How to update DataURL links for the icons? Gulp? On demand / automatically
+
+[Dialog box]
+- Keyboard shortcut to open Code Colorer?
+- How to close a dialog box by pressing Esc?
+- Use CloseCustomActionDialogNoRefresh (https://dev.office.com/sharepoint/docs/sp-add-ins/sharepoint-add-ins-ux-design-guidelines)
