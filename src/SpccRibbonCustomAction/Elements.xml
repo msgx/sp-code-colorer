@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction Id="SpccRibbonCustomAction" Location="CommandUI.Ribbon">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.Templates._children">
+					<GroupTemplate Id="SpccRibbonGroupTemplate">
+						<Layout Title="Large">
+							<Section Type="OneRow">
+								<Row>
+									<ControlRef TemplateAlias="c1" DisplayMode="Large" />
+								</Row>
+							</Section>
+						</Layout>
+					</GroupTemplate>
+				</CommandUIDefinition>
+				<CommandUIDefinition Location="Ribbon.EditingTools.CPEditTab.Scaling._children">
+					<MaxSize Id="SpccRibbonGroupMaxSize" GroupId="SpccRibbonGroup" Sequence="75" Size="Large" />
+				</CommandUIDefinition>
+				<CommandUIDefinition Location="Ribbon.EditingTools.CPEditTab.Groups._children">
+					<Group
+						Id="SpccRibbonGroup"
+						Sequence="75"
+						Title="Code"
+						Description=""
+						Template="SpccRibbonGroupTemplate">
+						<Controls Id="SpccRibbonGroupControls">
+							<Button
+								Id="SpccRibbonButton"
+								Sequence="5"
+								Command="spccOpenCodeColorer"
+								LabelText="Highlight"
+								Description="Open Code Colorer add-in to apply highlighting styles to source code."
+								Image16by16="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpi/P//PwMlgAVEaObsQTHl+hQXxluMDShiav8bGE8xG6KImf09z8jEQCEYeAMYqRKIDDmMqKZM+c/IcAhNzO4/Y0+CNopYyYKrgyAQWQiFEdDpKE6GsWHewRmI6enpMOZ/uGGobIaZM2dCXDB78dz/GDZjakY25D9MDF8YoGvGajgTXv+jGoTVYCaCgYiqCcNVFKdEgAADAI9DODK9hW5tAAAAAElFTkSuQmCC"
+								Image32by32="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAV5JREFUeNpi/P//P8NAAiaGAQYsMIZmzh68QXF9igsjiL5VMhGvOrWefLC6U8yGeNWZ/T3POChCYNQBow4YdQDjaEkIZ+Uw4g+KKf/BJRfDIQLq7CDqehK08aorWXB1tCQcdcCoAwaHAxhAJSE9cfgONxT+gBfF8JJw9uK5eF2SGpvMmJ6eTqy5U4E4C4hnAHEmLkUzZ84kOw2IAvEVUAxCaVEkOQEgjoPKTSagliwHgAzYD8TaQHwViB2B+DWSfBIQ8wDxbiC+BpVzhKrVhuoVJdcBYgQsZ0IK8mlI4tgcIUaOA6ZADfgJxCFoloOALxCrAPEdIN6MJvcaqucn1Iwp5DggB+oLdiBegx6fSL4HJb5/WKJuDVTvVahZJDvgFZ741AJiNyD+AsRziUg3r8hNhLgSFchHoEbGYiD+QGyiZUHO5yQ6Qgct68VCs9oUAmpxNMkoAyAf85KjESDAAIhswSjKfEB1AAAAAElFTkSuQmCC"
+								TemplateAlias="c1" />
+						</Controls>
+					</Group>
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+			<CommandUIHandlers>
+				<CommandUIHandler Command="spccOpenCodeColorer" CommandAction="https://google.com" />
+			</CommandUIHandlers>
+		</CommandUIExtension >
+	</CustomAction>
+</Elements>

@@ -1,7 +1,3 @@
-[Icons]
-- Redesign main icon
-- Find an icon to place on the Ribbon
-
 [Three areas]
 1. Input area for the code (plain-text)
 2. Preview with colored code
@@ -16,11 +12,16 @@ How to display this areas?
 - JS-library limits?
 - SharePoint limits? (e.g. WikiContent field)
 
+[How to open the add-in?]
+- From the Ribbon while editing page
+? From the add-in home page (dedicated link to open dialog)
+
 [User actions]
 - Insert source code (Ctrl+V, paste)
 - Preview
 - Copy to clipboard: rich-text
 - Copy to clipboard: HTML
+- Paste into the page (if possible, e.g. if the dialog was opened while editing the page's content)
 - Cancel/Close
 
 [Two ways to grab the code]

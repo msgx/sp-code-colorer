@@ -3,5 +3,7 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
     <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="spcc16x16.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="spcc32x32.png" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>
