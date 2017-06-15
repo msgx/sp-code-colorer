@@ -1,31 +1,22 @@
-﻿'use strict';
+﻿"use strict";
 
-ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
+SP.SOD.executeFunc("sp.js", "SP.ClientContext", function () {
+	var context = SP.ClientContext.get_current();
+	var user = context.get_web().get_currentUser();
 
-function initializePage()
-{
-    var context = SP.ClientContext.get_current();
-    var user = context.get_web().get_currentUser();
+	$(document).ready(function () {
+	});
 
-    // This code runs when the DOM is ready and creates a context object which is needed to use the SharePoint object model
-    $(document).ready(function () {
-        getUserName();
-    });
+	function getUserName() {
+		context.load(user);
+		context.executeQueryAsync(onGetUserNameSuccess, onGetUserNameFail);
+	}
 
-    // This function prepares, loads, and then executes a SharePoint query to get the current users information
-    function getUserName() {
-        context.load(user);
-        context.executeQueryAsync(onGetUserNameSuccess, onGetUserNameFail);
-    }
+	function onGetUserNameSuccess() {
+		$('#message').text('Hello ' + user.get_title());
+	}
 
-    // This function is executed if the above call is successful
-    // It replaces the contents of the 'message' element with the user name
-    function onGetUserNameSuccess() {
-        $('#message').text('Hello ' + user.get_title());
-    }
-
-    // This function is executed if the above call fails
-    function onGetUserNameFail(sender, args) {
-        alert('Failed to get user name. Error:' + args.get_message());
-    }
-}
+	function onGetUserNameFail(sender, args) {
+		alert('Failed to get user name. Error:' + args.get_message());
+	}
+});
