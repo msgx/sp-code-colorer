@@ -7,7 +7,7 @@
 	<SharePoint:ScriptLink Name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
 </asp:Content>
 
-<asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">Code Colorer</asp:Content>
+<asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">How to use Code Colorer</asp:Content>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 	<h1>Lorem ipsum</h1>
