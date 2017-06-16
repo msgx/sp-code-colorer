@@ -5,8 +5,8 @@
 		Location="CommandUI.Ribbon"
 		Title="Code Colorer"
 		HostWebDialog="true"
-		HostWebDialogWidth="500"
-		HostWebDialogHeight="320">
+		HostWebDialogWidth="600"
+		HostWebDialogHeight="400">
 		<CommandUIExtension>
 			<CommandUIDefinitions>
 				<CommandUIDefinition Location="Ribbon.Templates._children">
