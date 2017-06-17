@@ -30,7 +30,7 @@ How to display this areas?
 
 Do we need to prepare the source code somehow? For example, smart quotes, autoindent, etc. Maybe JS-library can do it already.
 
-Frameworks & libraries: jQuery, Office UI Fabric, ClipboardJS, HighlightJS
+Frameworks & libraries: jQuery, Office UI Fabric, React, ClipboardJS, HighlightJS
 
 ! Localization
 
@@ -49,3 +49,5 @@ How to update DataURL links for the icons? Gulp? On demand / automatically
 - Keyboard shortcut to open Code Colorer?
 - How to close a dialog box by pressing Esc?
 - Use CloseCustomActionDialogNoRefresh (https://dev.office.com/sharepoint/docs/sp-add-ins/sharepoint-add-ins-ux-design-guidelines)
+
+? Use Webpack to bundle JS-file with only needed parts of UIFabric, React, etc.
