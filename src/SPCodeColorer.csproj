@@ -117,7 +117,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(SolutionDir)..\node_modules\react\dist\react.min.js" "$(SolutionDir)\Scripts" /d /f
-xcopy "$(SolutionDir)..\node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\Scripts" /d /f</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(SolutionDir)..\node_modules\react\dist\react.min.js" "$(SolutionDir)\Scripts" /d /f /y
+xcopy "$(SolutionDir)..\node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\Scripts" /d /f /y</PostBuildEvent>
   </PropertyGroup>
 </Project>
