@@ -45,7 +45,7 @@
 				</CommandUIDefinition>
 			</CommandUIDefinitions>
 			<CommandUIHandlers>
-				<CommandUIHandler Command="spccOpenCodeColorer" CommandAction="~appWebUrl/Pages/Colorer.aspx?{StandardTokens}&amp;IsDlg=1" />
+				<CommandUIHandler Command="spccOpenCodeColorer" CommandAction="~appWebUrl/Pages/App.aspx?{StandardTokens}&amp;IsDlg=1" />
 			</CommandUIHandlers>
 		</CommandUIExtension >
 	</CustomAction>

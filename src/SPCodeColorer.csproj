@@ -42,9 +42,10 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Content\fabric.min.css" />
     <Content Include="Images\spcc16x16.png" />
     <Content Include="Images\spcc32x32.png" />
-    <Content Include="Pages\Colorer.aspx" />
+    <Content Include="Pages\App.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Scripts\react-dom.min.js" />
     <Content Include="Scripts\react.min.js" />
@@ -76,7 +77,6 @@
       <SharePointProjectItemId>{7159ba7e-3294-4248-86ba-c864c5ad7ea1}</SharePointProjectItemId>
     </None>
     <Content Include="Content\Elements.xml" />
-    <Content Include="Content\app.css" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\appicon.png">
@@ -107,8 +107,8 @@
     </AppManifestFile>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="components\main.tsx" />
-    <TypeScriptCompile Include="components\tabs.tsx" />
+    <TypeScriptCompile Include="Components\App.tsx" />
+    <TypeScriptCompile Include="Components\NavigationTabs.tsx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -118,6 +118,8 @@
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(SolutionDir)..\node_modules\react\dist\react.min.js" "$(SolutionDir)\Scripts" /d /f /y
-xcopy "$(SolutionDir)..\node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\Scripts" /d /f /y</PostBuildEvent>
+xcopy "$(SolutionDir)..\node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\Scripts" /d /f /y
+xcopy "$(SolutionDir)..\node_modules\office-ui-fabric-react\dist\css\fabric.min.css" "$(SolutionDir)\Content" /d /f /y
+</PostBuildEvent>
   </PropertyGroup>
 </Project>

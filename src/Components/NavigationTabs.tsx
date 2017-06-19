@@ -2,7 +2,7 @@
 import { Label } from "office-ui-fabric-react/lib/Label";
 import { Pivot, PivotItem } from "office-ui-fabric-react/lib/Pivot";
 
-export class ColorerTabs extends React.Component<undefined, undefined> {
+export class NavigationTabs extends React.Component<undefined, undefined> {
 	render() {
 		return (
 			<Pivot>
