@@ -2,11 +2,5 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
 	<Module Name="Content">
 		<File Path="Content\app.css" Url="Content/app.css" ReplaceContent="TRUE" />
-    <File Path="Content\fabric.min.css" Url="Content/fabric.min.css" ReplaceContent="TRUE" />
-    <File Path="Content\fabric.rtl.min.css" Url="Content/fabric.rtl.min.css" ReplaceContent="TRUE" />
-    <File Path="Content\fabric.components.rtl.min.css" Url="Content/fabric.components.rtl.min.css" ReplaceContent="TRUE" />
-    <File Path="Content\fabric.components.rtl.css" Url="Content/fabric.components.rtl.css" ReplaceContent="TRUE" />
-    <File Path="Content\fabric.components.min.css" Url="Content/fabric.components.min.css" ReplaceContent="TRUE" />
-    <File Path="Content\fabric.components.css" Url="Content/fabric.components.css" ReplaceContent="TRUE" />
   </Module>
 </Elements>
