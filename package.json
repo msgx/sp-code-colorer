@@ -1,14 +1,6 @@
 {
   "name": "sp.code-colorer",
-  "description": "SharePoint Add-in that helps editors with highlighting of source code.",
-  "author": "Alisher Abdurakhmanov",
-  "version": "1.0.0",
-  "license": "MIT",
-  "keywords": [
-    "SharePoint",
-    "highlight",
-    "colorer"
-  ],
+  "version": "0.1.0",
   "main": "./src/Scripts/bundle.js",
   "scripts": {
     "build": "webpack",
@@ -31,5 +23,14 @@
     "typescript": "^2.3.4",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
-  }
+  },
+  "description": "SharePoint Add-in that helps editors with highlighting of source code.",
+  "keywords": [
+    "SharePoint",
+    "highlight",
+    "colorer"
+  ],
+  "author": "Alisher Abdurakhmanov",
+  "license": "MIT",
+  "private": true
 }
