@@ -1,8 +1,8 @@
 module.exports = {
-	entry: "./src/Components/App.tsx",
+	entry: "./components/App.tsx",
 	output: {
 		filename: "bundle.js",
-		path: __dirname + "/src/Scripts"
+		path: __dirname + "/scripts"
 	},
 	devtool: "source-map",
 	resolve: {
@@ -10,8 +10,8 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{ test: /\.tsx?$/, loader: "babel-loader" },
-			{ test: /\.js$/, enforce: "pre", loader: "source-map-loader" }
+			{ test: /\.tsx?$/, exclude: /node_modules/, loader: "babel-loader" },
+			{ test: /\.js$/, exclude: /node_modules/, enforce: "pre", loader: "source-map-loader" }
 		]
 	},
 	externals: {

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 49);
+/******/ 	return __webpack_require__(__webpack_require__.s = 81);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -78,6 +78,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(12));
 
+//# sourceMappingURL=Utilities.js.map
 
 
 /***/ }),
@@ -280,8 +281,9 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(55));
+__export(__webpack_require__(54));
 
+//# sourceMappingURL=Styling.js.map
 
 
 /***/ }),
@@ -722,6 +724,7 @@ function shouldUseCssText() {
     return useCSSText;
 }
 
+//# sourceMappingURL=index.js.map
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(142)))
 
@@ -732,17 +735,18 @@ function shouldUseCssText() {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var theme_1 = __webpack_require__(62);
+var theme_1 = __webpack_require__(61);
 exports.getTheme = theme_1.getTheme;
 exports.loadTheme = theme_1.loadTheme;
 exports.createTheme = theme_1.createTheme;
 var mergeStyles_1 = __webpack_require__(14);
 exports.mergeStyles = mergeStyles_1.mergeStyles;
-var mergeStyleSets_1 = __webpack_require__(61);
+var mergeStyleSets_1 = __webpack_require__(60);
 exports.mergeStyleSets = mergeStyleSets_1.mergeStyleSets;
-var buildClassMap_1 = __webpack_require__(60);
+var buildClassMap_1 = __webpack_require__(59);
 exports.buildClassMap = buildClassMap_1.buildClassMap;
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -893,6 +897,7 @@ function isVirtualElement(element) {
     return element && !!element._virtual;
 }
 
+//# sourceMappingURL=dom.js.map
 
 
 /***/ }),
@@ -962,6 +967,7 @@ var DirectionalHint;
     DirectionalHint[DirectionalHint["rightBottomEdge"] = 13] = "rightBottomEdge";
 })(DirectionalHint = exports.DirectionalHint || (exports.DirectionalHint = {}));
 
+//# sourceMappingURL=DirectionalHint.js.map
 
 
 /***/ }),
@@ -1037,6 +1043,7 @@ var BaseButton = (function (_super) {
             Utilities_1.assign(buttonProps, {
                 'onClick': this._onToggleMenu,
                 'aria-expanded': this.state.menuProps ? true : false,
+                'aria-owns': this.state.menuProps ? this._labelId + '-menu' : null,
                 'aria-haspopup': true
             });
         }
@@ -1104,7 +1111,7 @@ var BaseButton = (function (_super) {
                 null);
     };
     BaseButton.prototype._onRenderMenu = function (menuProps) {
-        return (React.createElement(ContextualMenu_1.ContextualMenu, tslib_1.__assign({ isBeakVisible: true, directionalHint: DirectionalHint_1.DirectionalHint.bottomLeftEdge }, menuProps, { className: Styling_1.mergeStyles('ms-BaseButton-menuhost', menuProps.className), target: this._buttonElement, labelElementId: this._labelId, onDismiss: this._onToggleMenu })));
+        return (React.createElement(ContextualMenu_1.ContextualMenu, tslib_1.__assign({ isBeakVisible: true, id: this._labelId + '-menu', directionalHint: DirectionalHint_1.DirectionalHint.bottomLeftEdge }, menuProps, { className: Styling_1.mergeStyles('ms-BaseButton-menuhost', menuProps.className), target: this._buttonElement, labelElementId: this._labelId, onDismiss: this._onToggleMenu })));
     };
     BaseButton.prototype._onToggleMenu = function () {
         var menuProps = this.props.menuProps;
@@ -1174,6 +1181,7 @@ tslib_1.__decorate([
 ], BaseButton.prototype, "_getClassNames", null);
 exports.BaseButton = BaseButton;
 
+//# sourceMappingURL=BaseButton.js.map
 
 
 /***/ }),
@@ -1183,19 +1191,20 @@ exports.BaseButton = BaseButton;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var AnimationStyles_1 = __webpack_require__(56);
+var AnimationStyles_1 = __webpack_require__(55);
 exports.AnimationStyles = AnimationStyles_1.AnimationStyles;
 var DefaultPalette_1 = __webpack_require__(25);
 exports.DefaultPalette = DefaultPalette_1.DefaultPalette;
-var DefaultFontStyles_1 = __webpack_require__(57);
+var DefaultFontStyles_1 = __webpack_require__(56);
 exports.DefaultFontStyles = DefaultFontStyles_1.DefaultFontStyles;
 exports.FontSizes = DefaultFontStyles_1.FontSizes;
 exports.FontWeights = DefaultFontStyles_1.FontWeights;
-var IconCodes_1 = __webpack_require__(58);
+var IconCodes_1 = __webpack_require__(57);
 exports.IconCodes = IconCodes_1.IconCodes;
-var getFocusStyle_1 = __webpack_require__(59);
+var getFocusStyle_1 = __webpack_require__(58);
 exports.getFocusStyle = getFocusStyle_1.getFocusStyle;
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -1270,6 +1279,7 @@ function keyframes(timeline) {
 }
 exports.keyframes = keyframes;
 
+//# sourceMappingURL=glamorExports.js.map
 
 
 /***/ }),
@@ -1283,33 +1293,34 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(26));
-__export(__webpack_require__(63));
+__export(__webpack_require__(62));
 __export(__webpack_require__(27));
 __export(__webpack_require__(28));
-__export(__webpack_require__(64));
+__export(__webpack_require__(63));
 __export(__webpack_require__(15));
 __export(__webpack_require__(29));
+__export(__webpack_require__(64));
 __export(__webpack_require__(65));
 __export(__webpack_require__(66));
 __export(__webpack_require__(67));
 __export(__webpack_require__(68));
-__export(__webpack_require__(69));
 __export(__webpack_require__(7));
+__export(__webpack_require__(69));
 __export(__webpack_require__(70));
 __export(__webpack_require__(71));
 __export(__webpack_require__(72));
 __export(__webpack_require__(73));
-__export(__webpack_require__(74));
 __export(__webpack_require__(30));
+__export(__webpack_require__(75));
 __export(__webpack_require__(76));
 __export(__webpack_require__(77));
 __export(__webpack_require__(78));
-__export(__webpack_require__(79));
 __export(__webpack_require__(31));
-__export(__webpack_require__(81));
+__export(__webpack_require__(80));
 __export(__webpack_require__(32));
-__export(__webpack_require__(75));
+__export(__webpack_require__(74));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -1439,6 +1450,7 @@ function mergeStyles() {
 }
 exports.mergeStyles = mergeStyles;
 
+//# sourceMappingURL=mergeStyles.js.map
 
 
 /***/ }),
@@ -1682,6 +1694,7 @@ var EventGroup = (function () {
 EventGroup._uniqueId = 0;
 exports.EventGroup = EventGroup;
 
+//# sourceMappingURL=EventGroup.js.map
 
 
 /***/ }),
@@ -1899,6 +1912,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(122));
 
+//# sourceMappingURL=Icon.js.map
 
 
 /***/ }),
@@ -1985,6 +1999,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme, focusInset, foc
     };
 });
 
+//# sourceMappingURL=BaseButton.styles.js.map
 
 
 /***/ }),
@@ -2028,6 +2043,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme, customStyles, f
     return Styling_1.mergeStyleSets(baseButtonStyles, defaultButtonStyles, customStyles);
 });
 
+//# sourceMappingURL=DefaultButton.styles.js.map
 
 
 /***/ }),
@@ -2060,6 +2076,7 @@ var PivotLinkSize;
     PivotLinkSize[PivotLinkSize["large"] = 1] = "large";
 })(PivotLinkSize = exports.PivotLinkSize || (exports.PivotLinkSize = {}));
 
+//# sourceMappingURL=Pivot.Props.js.map
 
 
 /***/ }),
@@ -2145,6 +2162,7 @@ exports.DefaultPalette = {
     greenLight: '#bad80a'
 };
 
+//# sourceMappingURL=DefaultPalette.js.map
 
 
 /***/ }),
@@ -2529,6 +2547,7 @@ var Async = (function () {
 }());
 exports.Async = Async;
 
+//# sourceMappingURL=Async.js.map
 
 
 /***/ }),
@@ -2753,6 +2772,7 @@ BaseComponent.onError = function (errorMessage) {
 function nullRender() { return null; }
 exports.nullRender = nullRender;
 
+//# sourceMappingURL=BaseComponent.js.map
 
 
 /***/ }),
@@ -2843,6 +2863,7 @@ Customizer.contextTypes = {
 Customizer.childContextTypes = Customizer.contextTypes;
 exports.Customizer = Customizer;
 
+//# sourceMappingURL=Customizer.js.map
 
 
 /***/ }),
@@ -2873,6 +2894,7 @@ var KeyCodes;
     KeyCodes[KeyCodes["up"] = 38] = "up";
 })(KeyCodes = exports.KeyCodes || (exports.KeyCodes = {}));
 
+//# sourceMappingURL=KeyCodes.js.map
 
 
 /***/ }),
@@ -2958,6 +2980,7 @@ function getId(prefix) {
 }
 exports.getId = getId;
 
+//# sourceMappingURL=object.js.map
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
@@ -2969,7 +2992,7 @@ exports.getId = getId;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var dom_1 = __webpack_require__(7);
-var scroll_scss_1 = __webpack_require__(80);
+var scroll_scss_1 = __webpack_require__(79);
 var _scrollbarWidth;
 var _bodyScrollDisabledCount = 0;
 exports.DATA_IS_SCROLLABLE_ATTRIBUTE = 'data-is-scrollable';
@@ -3042,6 +3065,7 @@ function findScrollableParent(startingElement) {
 }
 exports.findScrollableParent = findScrollableParent;
 
+//# sourceMappingURL=scroll.js.map
 
 
 /***/ }),
@@ -3112,6 +3136,7 @@ function setWarningCallback(warningCallback) {
 }
 exports.setWarningCallback = setWarningCallback;
 
+//# sourceMappingURL=warn.js.map
 
 
 /***/ }),
@@ -4294,6 +4319,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(119));
 
+//# sourceMappingURL=FocusZone.js.map
 
 
 /***/ }),
@@ -4321,6 +4347,7 @@ var ButtonType;
     ButtonType[ButtonType["default"] = 6] = "default";
 })(ButtonType = exports.ButtonType || (exports.ButtonType = {}));
 
+//# sourceMappingURL=Button.Props.js.map
 
 
 /***/ }),
@@ -4356,6 +4383,7 @@ CommandButton = tslib_1.__decorate([
 ], CommandButton);
 exports.CommandButton = CommandButton;
 
+//# sourceMappingURL=CommandButton.js.map
 
 
 /***/ }),
@@ -4391,6 +4419,7 @@ CompoundButton = tslib_1.__decorate([
 ], CompoundButton);
 exports.CompoundButton = CompoundButton;
 
+//# sourceMappingURL=CompoundButton.js.map
 
 
 /***/ }),
@@ -4426,6 +4455,7 @@ DefaultButton = tslib_1.__decorate([
 ], DefaultButton);
 exports.DefaultButton = DefaultButton;
 
+//# sourceMappingURL=DefaultButton.js.map
 
 
 /***/ }),
@@ -4461,6 +4491,7 @@ IconButton = tslib_1.__decorate([
 ], IconButton);
 exports.IconButton = IconButton;
 
+//# sourceMappingURL=IconButton.js.map
 
 
 /***/ }),
@@ -4496,6 +4527,7 @@ PrimaryButton = tslib_1.__decorate([
 ], PrimaryButton);
 exports.PrimaryButton = PrimaryButton;
 
+//# sourceMappingURL=PrimaryButton.js.map
 
 
 /***/ }),
@@ -4514,6 +4546,7 @@ var ContextualMenuItemType;
     ContextualMenuItemType[ContextualMenuItemType["Header"] = 2] = "Header";
 })(ContextualMenuItemType = exports.ContextualMenuItemType || (exports.ContextualMenuItemType = {}));
 
+//# sourceMappingURL=ContextualMenu.Props.js.map
 
 
 /***/ }),
@@ -4533,6 +4566,7 @@ var FocusZoneDirection;
     FocusZoneDirection[FocusZoneDirection["bidirectional"] = 2] = "bidirectional";
 })(FocusZoneDirection = exports.FocusZoneDirection || (exports.FocusZoneDirection = {}));
 
+//# sourceMappingURL=FocusZone.Props.js.map
 
 
 /***/ }),
@@ -4565,6 +4599,7 @@ var IconType;
     IconType[IconType["Image"] = 100001] = "Image";
 })(IconType = exports.IconType || (exports.IconType = {}));
 
+//# sourceMappingURL=Icon.Props.js.map
 
 
 /***/ }),
@@ -4685,6 +4720,7 @@ Layer.defaultProps = {
 };
 exports.Layer = Layer;
 
+//# sourceMappingURL=Layer.js.map
 
 
 /***/ }),
@@ -4709,6 +4745,7 @@ var PivotItem = (function (_super) {
 }(Utilities_1.BaseComponent));
 exports.PivotItem = PivotItem;
 
+//# sourceMappingURL=PivotItem.js.map
 
 
 /***/ }),
@@ -4833,66 +4870,16 @@ var NavigationTabs = exports.NavigationTabs = function (_React$Component) {
 
 "use strict";
 
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var React = _interopRequireWildcard(_react);
-
-var _reactDom = __webpack_require__(24);
-
-var ReactDOM = _interopRequireWildcard(_reactDom);
-
-var _NavigationTabs = __webpack_require__(48);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_React$Component) {
-	_inherits(App, _React$Component);
-
-	function App() {
-		_classCallCheck(this, App);
-
-		return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-	}
-
-	_createClass(App, [{
-		key: "render",
-		value: function render() {
-			return React.createElement(_NavigationTabs.NavigationTabs, null);
-		}
-	}]);
-
-	return App;
-}(React.Component);
-
-var appContainer = document.getElementById("spccApp");
-if (appContainer) {
-	ReactDOM.render(React.createElement(App, null), appContainer);
-}
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = __webpack_require__(6);
 var index_2 = __webpack_require__(10);
 exports.AnimationClassNames = index_1.buildClassMap(index_2.AnimationStyles);
 
+//# sourceMappingURL=AnimationClassNames.js.map
 
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4933,10 +4920,11 @@ function _defineGetter(obj, colorName, suffix, isHover, cssProperty) {
     });
 }
 
+//# sourceMappingURL=ColorClassNames.js.map
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4946,10 +4934,11 @@ var index_1 = __webpack_require__(6);
 var index_2 = __webpack_require__(10);
 exports.FontClassNames = index_1.buildClassMap(index_2.DefaultFontStyles);
 
+//# sourceMappingURL=FontClassNames.js.map
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4981,28 +4970,30 @@ for (var iconName in index_1.IconCodes) {
     _loop_1(iconName);
 }
 
+//# sourceMappingURL=IconClassNames.js.map
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var AnimationClassNames_1 = __webpack_require__(50);
+var AnimationClassNames_1 = __webpack_require__(49);
 exports.AnimationClassNames = AnimationClassNames_1.AnimationClassNames;
-var FontClassNames_1 = __webpack_require__(52);
+var FontClassNames_1 = __webpack_require__(51);
 exports.FontClassNames = FontClassNames_1.FontClassNames;
-var IconClassNames_1 = __webpack_require__(53);
+var IconClassNames_1 = __webpack_require__(52);
 exports.IconClassNames = IconClassNames_1.IconClassNames;
-var ColorClassNames_1 = __webpack_require__(51);
+var ColorClassNames_1 = __webpack_require__(50);
 exports.ColorClassNames = ColorClassNames_1.ColorClassNames;
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5012,14 +5003,15 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(11));
-__export(__webpack_require__(54));
+__export(__webpack_require__(53));
 __export(__webpack_require__(10));
 __export(__webpack_require__(6));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5167,10 +5159,11 @@ function _createSlideOutY(toY) {
     });
 }
 
+//# sourceMappingURL=AnimationStyles.js.map
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5356,10 +5349,11 @@ function _getFontBaseUrl() {
  */
 _registerDefaultFontFaces();
 
+//# sourceMappingURL=DefaultFontStyles.js.map
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8196,10 +8190,11 @@ exports.IconCodes = {
     zoomOut: '\uE71F'
 };
 
+//# sourceMappingURL=IconCodes.js.map
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8238,10 +8233,11 @@ function getFocusStyle(theme, inset, color, position) {
 }
 exports.getFocusStyle = getFocusStyle;
 
+//# sourceMappingURL=getFocusStyle.js.map
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8265,10 +8261,11 @@ function buildClassMap(styles) {
 }
 exports.buildClassMap = buildClassMap;
 
+//# sourceMappingURL=buildClassMap.js.map
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8303,10 +8300,11 @@ function mergeStyleSets() {
 }
 exports.mergeStyleSets = mergeStyleSets;
 
+//# sourceMappingURL=mergeStyleSets.js.map
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8389,10 +8387,11 @@ function _makeSemanticColorsFromPalette(p) {
     };
 }
 
+//# sourceMappingURL=theme.js.map
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8479,10 +8478,11 @@ var AutoScroll = (function () {
 }());
 exports.AutoScroll = AutoScroll;
 
+//# sourceMappingURL=AutoScroll.js.map
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8528,10 +8528,11 @@ DelayedRender.defaultProps = {
 };
 exports.DelayedRender = DelayedRender;
 
+//# sourceMappingURL=DelayedRender.js.map
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8583,10 +8584,11 @@ var Rectangle = (function () {
 }());
 exports.Rectangle = Rectangle;
 
+//# sourceMappingURL=Rectangle.js.map
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8612,10 +8614,11 @@ function createArray(size, getItem) {
 }
 exports.createArray = createArray;
 
+//# sourceMappingURL=array.js.map
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8658,10 +8661,11 @@ function autobind(target, key, descriptor) {
 }
 exports.autobind = autobind;
 
+//# sourceMappingURL=autobind.js.map
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8695,10 +8699,11 @@ function css() {
 }
 exports.css = css;
 
+//# sourceMappingURL=css.js.map
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8749,10 +8754,11 @@ function customizable(fields) {
 }
 exports.customizable = customizable;
 
+//# sourceMappingURL=customizable.js.map
 
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8910,10 +8916,11 @@ function doesElementContainFocus(element) {
 }
 exports.doesElementContainFocus = doesElementContainFocus;
 
+//# sourceMappingURL=focus.js.map
 
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8969,10 +8976,11 @@ function unhoistMethods(source, methodNames) {
 }
 exports.unhoistMethods = unhoistMethods;
 
+//# sourceMappingURL=hoist.js.map
 
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9034,10 +9042,11 @@ function getInitials(displayName, isRtl) {
 }
 exports.getInitials = getInitials;
 
+//# sourceMappingURL=initials.js.map
 
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9088,10 +9097,11 @@ function setLanguage(language, avoidPersisting) {
 }
 exports.setLanguage = setLanguage;
 
+//# sourceMappingURL=language.js.map
 
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9103,10 +9113,11 @@ function getDistanceBetweenPoints(point1, point2) {
 }
 exports.getDistanceBetweenPoints = getDistanceBetweenPoints;
 
+//# sourceMappingURL=math.js.map
 
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9201,10 +9212,11 @@ function _createNode() {
     };
 }
 
+//# sourceMappingURL=memoize.js.map
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9241,10 +9253,11 @@ function hasOverflow(element) {
 }
 exports.hasOverflow = hasOverflow;
 
+//# sourceMappingURL=overflow.js.map
 
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9475,10 +9488,11 @@ function getNativeProps(props, allowedPropNames, excludedPropNames) {
 }
 exports.getNativeProps = getNativeProps;
 
+//# sourceMappingURL=properties.js.map
 
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9496,10 +9510,11 @@ function setBaseUrl(baseUrl) {
 }
 exports.setBaseUrl = setBaseUrl;
 
+//# sourceMappingURL=resources.js.map
 
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9575,10 +9590,11 @@ function getRTLSafeKeyCode(key) {
 }
 exports.getRTLSafeKeyCode = getRTLSafeKeyCode;
 
+//# sourceMappingURL=rtl.js.map
 
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9593,10 +9609,11 @@ exports.default = styles;
 load_themed_styles_1.loadStyles([{ "rawString": ".msFabricScrollDisabled_7c68ad65{overflow:hidden!important}" }]);
 /* tslint:enable */ 
 
+//# sourceMappingURL=scroll.scss.js.map
 
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9633,7 +9650,59 @@ function format(s) {
 }
 exports.format = format;
 
+//# sourceMappingURL=string.js.map
 
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var React = _interopRequireWildcard(_react);
+
+var _reactDom = __webpack_require__(24);
+
+var ReactDOM = _interopRequireWildcard(_reactDom);
+
+var _NavigationTabs = __webpack_require__(48);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_React$Component) {
+	_inherits(App, _React$Component);
+
+	function App() {
+		_classCallCheck(this, App);
+
+		return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	}
+
+	_createClass(App, [{
+		key: "render",
+		value: function render() {
+			return React.createElement(_NavigationTabs.NavigationTabs, null);
+		}
+	}]);
+
+	return App;
+}(React.Component);
+
+var appContainer = document.getElementById("spccApp");
+if (appContainer) {
+	ReactDOM.render(React.createElement(App, null), appContainer);
+}
 
 /***/ }),
 /* 82 */
@@ -10925,6 +10994,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(107));
 
+//# sourceMappingURL=Button.js.map
 
 
 /***/ }),
@@ -10939,6 +11009,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(111));
 
+//# sourceMappingURL=Callout.js.map
 
 
 /***/ }),
@@ -10953,6 +11024,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(114));
 
+//# sourceMappingURL=ContextualMenu.js.map
 
 
 /***/ }),
@@ -10967,6 +11039,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(117));
 
+//# sourceMappingURL=Fabric.js.map
 
 
 /***/ }),
@@ -10981,6 +11054,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(128));
 
+//# sourceMappingURL=Label.js.map
 
 
 /***/ }),
@@ -10995,6 +11069,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(131));
 
+//# sourceMappingURL=Layer.js.map
 
 
 /***/ }),
@@ -11009,6 +11084,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(134));
 
+//# sourceMappingURL=Pivot.js.map
 
 
 /***/ }),
@@ -11023,6 +11099,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(136));
 
+//# sourceMappingURL=Popup.js.map
 
 
 /***/ }),
@@ -11078,6 +11155,7 @@ var Button = (function (_super) {
 }(Utilities_1.BaseComponent));
 exports.Button = Button;
 
+//# sourceMappingURL=Button.js.map
 
 
 /***/ }),
@@ -11134,6 +11212,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme, customStyles) {
     return Styling_1.mergeStyleSets(baseButtonStyles, commandButtonStyles, customStyles);
 });
 
+//# sourceMappingURL=CommandButton.styles.js.map
 
 
 /***/ }),
@@ -11191,6 +11270,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme, customStyles) {
     return Styling_1.mergeStyleSets(defaultButtonStyles, compoundButtonStyles, customStyles);
 });
 
+//# sourceMappingURL=CompoundButton.styles.js.map
 
 
 /***/ }),
@@ -11233,6 +11313,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme, customStyles) {
     return Styling_1.mergeStyleSets(baseButtonStyles, iconButtonStyles, customStyles);
 });
 
+//# sourceMappingURL=IconButton.styles.js.map
 
 
 /***/ }),
@@ -11273,6 +11354,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme, customStyles) {
     return Styling_1.mergeStyleSets(defaultButtonStyles, primaryButtonStyles, customStyles);
 });
 
+//# sourceMappingURL=PrimaryButton.styles.js.map
 
 
 /***/ }),
@@ -11294,6 +11376,7 @@ __export(__webpack_require__(39));
 __export(__webpack_require__(41));
 __export(__webpack_require__(40));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -11323,6 +11406,7 @@ var Callout = (function (_super) {
 }(Utilities_1.BaseComponent));
 exports.Callout = Callout;
 
+//# sourceMappingURL=Callout.js.map
 
 
 /***/ }),
@@ -11334,16 +11418,17 @@ exports.Callout = Callout;
 /* tslint:disable */
 var load_themed_styles_1 = __webpack_require__(5);
 var styles = {
-    root: 'root_7906cd95',
-    container: 'container_7906cd95',
-    main: 'main_7906cd95',
-    beak: 'beak_7906cd95',
-    beakCurtain: 'beakCurtain_7906cd95',
+    root: 'root_44f050e1',
+    container: 'container_44f050e1',
+    main: 'main_44f050e1',
+    beak: 'beak_44f050e1',
+    beakCurtain: 'beakCurtain_44f050e1',
 };
-load_themed_styles_1.loadStyles([{ "rawString": ".root_7906cd95{box-shadow:0 0 5px 0 rgba(0,0,0,.4);position:absolute;border:1px solid " }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": ";box-sizing:border-box}@media screen and (-ms-high-contrast:active){.root_7906cd95{border:1px solid " }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}}@media screen and (-ms-high-contrast:black-on-white){.root_7906cd95{border:1px solid " }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}}.container_7906cd95{position:relative}.main_7906cd95{background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";overflow-x:hidden;overflow-y:auto;position:relative}.beak_7906cd95{position:absolute;background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";box-shadow:inherit;border:inherit;box-sizing:border-box;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.beakCurtain_7906cd95{position:absolute;top:0;right:0;bottom:0;left:0;background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}" }]);
+load_themed_styles_1.loadStyles([{ "rawString": ".root_44f050e1{box-shadow:0 0 5px 0 rgba(0,0,0,.4);position:absolute;border:1px solid " }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": ";box-sizing:border-box}@media screen and (-ms-high-contrast:active){.root_44f050e1{border:1px solid " }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}}@media screen and (-ms-high-contrast:black-on-white){.root_44f050e1{border:1px solid " }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}}.container_44f050e1{position:relative}.main_44f050e1{background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";overflow-x:hidden;overflow-y:auto;position:relative}.beak_44f050e1{position:absolute;background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";box-shadow:inherit;border:inherit;box-sizing:border-box;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.beakCurtain_44f050e1{position:absolute;top:0;right:0;bottom:0;left:0;background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}" }]);
 module.exports = styles;
 /* tslint:enable */ 
 
+//# sourceMappingURL=Callout.scss.js.map
 
 
 /***/ }),
@@ -11603,6 +11688,7 @@ tslib_1.__decorate([
 ], CalloutContent.prototype, "_onComponentDidMount", null);
 exports.CalloutContent = CalloutContent;
 
+//# sourceMappingURL=CalloutContent.js.map
 
 
 /***/ }),
@@ -11618,6 +11704,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(108));
 __export(__webpack_require__(8));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -12006,6 +12093,7 @@ tslib_1.__decorate([
 ], ContextualMenu.prototype, "_onSubMenuDismiss", null);
 exports.ContextualMenu = ContextualMenu;
 
+//# sourceMappingURL=ContextualMenu.js.map
 
 
 /***/ }),
@@ -12017,24 +12105,25 @@ exports.ContextualMenu = ContextualMenu;
 /* tslint:disable */
 var load_themed_styles_1 = __webpack_require__(5);
 var styles = {
-    root: 'root_bd64258f',
-    list: 'list_bd64258f',
-    item: 'item_bd64258f',
-    link: 'link_bd64258f',
-    isDisabled: 'isDisabled_bd64258f',
-    icon: 'icon_bd64258f',
-    isExpanded: 'isExpanded_bd64258f',
-    header: 'header_bd64258f',
-    linkContent: 'linkContent_bd64258f',
-    divider: 'divider_bd64258f',
-    iconColor: 'iconColor_bd64258f',
-    itemText: 'itemText_bd64258f',
-    submenuIcon: 'submenuIcon_bd64258f',
+    root: 'root_0214479f',
+    list: 'list_0214479f',
+    item: 'item_0214479f',
+    link: 'link_0214479f',
+    isDisabled: 'isDisabled_0214479f',
+    icon: 'icon_0214479f',
+    isExpanded: 'isExpanded_0214479f',
+    header: 'header_0214479f',
+    linkContent: 'linkContent_0214479f',
+    divider: 'divider_0214479f',
+    iconColor: 'iconColor_0214479f',
+    itemText: 'itemText_0214479f',
+    submenuIcon: 'submenuIcon_0214479f',
 };
-load_themed_styles_1.loadStyles([{ "rawString": ".root_bd64258f{background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";min-width:180px}.list_bd64258f{list-style-type:none;margin:0;padding:0;line-height:0}.item_bd64258f{font-size:14px;font-weight:400;color:" }, { "theme": "neutralPrimary", "defaultValue": "#333333" }, { "rawString": ";position:relative;box-sizing:border-box}.link_bd64258f{font:inherit;color:inherit;background:0 0;border:none;width:100%;height:36px;line-height:36px;display:block;cursor:pointer;padding:0 6px}.link_bd64258f::-moz-focus-inner{border:0}.link_bd64258f{outline:transparent}.link_bd64258f{position:relative}.ms-Fabric.is-focusVisible .link_bd64258f:focus:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid " }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}html[dir=ltr] .link_bd64258f{text-align:left}html[dir=rtl] .link_bd64258f{text-align:right}.link_bd64258f:hover:not([disabled]){background:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": "}.link_bd64258f.isDisabled_bd64258f,.link_bd64258f[disabled]{color:" }, { "theme": "neutralTertiaryAlt", "defaultValue": "#c8c8c8" }, { "rawString": ";cursor:default;pointer-events:none}.link_bd64258f.isDisabled_bd64258f .icon_bd64258f,.link_bd64258f[disabled] .icon_bd64258f{color:" }, { "theme": "neutralTertiaryAlt", "defaultValue": "#c8c8c8" }, { "rawString": "}.is-focusVisible .link_bd64258f:focus{background:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": "}.link_bd64258f.isExpanded_bd64258f,.link_bd64258f.isExpanded_bd64258f:hover{background:" }, { "theme": "neutralQuaternaryAlt", "defaultValue": "#dadada" }, { "rawString": ";color:" }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": ";font-weight:600}.header_bd64258f{font-size:12px;font-weight:400;font-weight:600;color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": ";background:0 0;border:none;height:36px;line-height:36px;cursor:default;padding:0 6px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.header_bd64258f::-moz-focus-inner{border:0}.header_bd64258f{outline:transparent}.header_bd64258f{position:relative}.ms-Fabric.is-focusVisible .header_bd64258f:focus:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid " }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}html[dir=ltr] .header_bd64258f{text-align:left}html[dir=rtl] .header_bd64258f{text-align:right}a.link_bd64258f{padding:0 6px;text-rendering:auto;color:inherit;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-shadow:none;text-decoration:none;box-sizing:border-box}.linkContent_bd64258f{white-space:nowrap;height:inherit;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:100%}.divider_bd64258f{display:block;height:1px;background-color:" }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": ";position:relative}.icon_bd64258f{display:inline-block;min-height:1px;max-height:36px;width:14px;margin:0 4px;vertical-align:middle;-ms-flex-negative:0;flex-shrink:0}.iconColor_bd64258f{color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.itemText_bd64258f{margin:0 4px;vertical-align:middle;display:inline-block;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.submenuIcon_bd64258f{height:36px;line-height:36px;text-align:center;font-size:10px;display:inline-block;vertical-align:middle;-ms-flex-negative:0;flex-shrink:0}" }]);
+load_themed_styles_1.loadStyles([{ "rawString": ".root_0214479f{background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";min-width:180px}.list_0214479f{list-style-type:none;margin:0;padding:0;line-height:0}.item_0214479f{font-size:14px;font-weight:400;color:" }, { "theme": "neutralPrimary", "defaultValue": "#333333" }, { "rawString": ";position:relative;box-sizing:border-box}.link_0214479f{font:inherit;color:inherit;background:0 0;border:none;width:100%;height:36px;line-height:36px;display:block;cursor:pointer;padding:0 6px}.link_0214479f::-moz-focus-inner{border:0}.link_0214479f{outline:transparent}.link_0214479f{position:relative}.ms-Fabric.is-focusVisible .link_0214479f:focus:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid " }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}html[dir=ltr] .link_0214479f{text-align:left}html[dir=rtl] .link_0214479f{text-align:right}.link_0214479f:hover:not([disabled]){background:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": "}.link_0214479f.isDisabled_0214479f,.link_0214479f[disabled]{color:" }, { "theme": "neutralTertiaryAlt", "defaultValue": "#c8c8c8" }, { "rawString": ";cursor:default;pointer-events:none}.link_0214479f.isDisabled_0214479f .icon_0214479f,.link_0214479f[disabled] .icon_0214479f{color:" }, { "theme": "neutralTertiaryAlt", "defaultValue": "#c8c8c8" }, { "rawString": "}.is-focusVisible .link_0214479f:focus{background:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": "}.link_0214479f.isExpanded_0214479f,.link_0214479f.isExpanded_0214479f:hover{background:" }, { "theme": "neutralQuaternaryAlt", "defaultValue": "#dadada" }, { "rawString": ";color:" }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": ";font-weight:600}.header_0214479f{font-size:12px;font-weight:400;font-weight:600;color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": ";background:0 0;border:none;height:36px;line-height:36px;cursor:default;padding:0 6px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.header_0214479f::-moz-focus-inner{border:0}.header_0214479f{outline:transparent}.header_0214479f{position:relative}.ms-Fabric.is-focusVisible .header_0214479f:focus:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid " }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}html[dir=ltr] .header_0214479f{text-align:left}html[dir=rtl] .header_0214479f{text-align:right}a.link_0214479f{padding:0 6px;text-rendering:auto;color:inherit;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-shadow:none;text-decoration:none;box-sizing:border-box}.linkContent_0214479f{white-space:nowrap;height:inherit;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:100%}.divider_0214479f{display:block;height:1px;background-color:" }, { "theme": "neutralLight", "defaultValue": "#eaeaea" }, { "rawString": ";position:relative}.icon_0214479f{display:inline-block;min-height:1px;max-height:36px;width:14px;margin:0 4px;vertical-align:middle;-ms-flex-negative:0;flex-shrink:0}.iconColor_0214479f{color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.itemText_0214479f{margin:0 4px;vertical-align:middle;display:inline-block;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.submenuIcon_0214479f{height:36px;line-height:36px;text-align:center;font-size:10px;display:inline-block;vertical-align:middle;-ms-flex-negative:0;flex-shrink:0}" }]);
 module.exports = styles;
 /* tslint:enable */ 
 
+//# sourceMappingURL=ContextualMenu.scss.js.map
 
 
 /***/ }),
@@ -12050,6 +12139,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(112));
 __export(__webpack_require__(42));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -12121,6 +12211,7 @@ var Fabric = (function (_super) {
 }(Utilities_1.BaseComponent));
 exports.Fabric = Fabric;
 
+//# sourceMappingURL=Fabric.js.map
 
 
 /***/ }),
@@ -12147,6 +12238,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme) {
     };
 });
 
+//# sourceMappingURL=Fabric.styles.js.map
 
 
 /***/ }),
@@ -12161,6 +12253,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(115));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -12739,6 +12832,7 @@ tslib_1.__decorate([
 ], FocusZone.prototype, "_onKeyDown", null);
 exports.FocusZone = FocusZone;
 
+//# sourceMappingURL=FocusZone.js.map
 
 
 /***/ }),
@@ -12754,6 +12848,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(118));
 __export(__webpack_require__(43));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -12790,6 +12885,7 @@ function Icon(props) {
 }
 exports.Icon = Icon;
 
+//# sourceMappingURL=Icon.js.map
 
 
 /***/ }),
@@ -12815,6 +12911,7 @@ exports.getStyles = Utilities_1.memoizeFunction(function (theme, customStyles) {
     return Styling_1.mergeStyleSets(iconStyles, customStyles);
 });
 
+//# sourceMappingURL=Icon.styles.js.map
 
 
 /***/ }),
@@ -12830,6 +12927,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(120));
 __export(__webpack_require__(44));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -12887,6 +12985,7 @@ var ImageLoadState;
     ImageLoadState[ImageLoadState["errorLoaded"] = 3] = "errorLoaded";
 })(ImageLoadState = exports.ImageLoadState || (exports.ImageLoadState = {}));
 
+//# sourceMappingURL=Image.Props.js.map
 
 
 /***/ }),
@@ -13046,6 +13145,7 @@ tslib_1.__decorate([
 exports.Image = Image;
 var _a, _b;
 
+//# sourceMappingURL=Image.js.map
 
 
 /***/ }),
@@ -13057,24 +13157,25 @@ var _a, _b;
 /* tslint:disable */
 var load_themed_styles_1 = __webpack_require__(5);
 var styles = {
-    root: 'root_764b0dfc',
-    rootIsMaximizeFrame: 'rootIsMaximizeFrame_764b0dfc',
-    image: 'image_764b0dfc',
-    imageIsLoaded: 'imageIsLoaded_764b0dfc',
-    imageIsCenter: 'imageIsCenter_764b0dfc',
-    imageIsContain: 'imageIsContain_764b0dfc',
-    imageIsCover: 'imageIsCover_764b0dfc',
-    imageIsLandscape: 'imageIsLandscape_764b0dfc',
-    imageIsPortrait: 'imageIsPortrait_764b0dfc',
-    imageIsNone: 'imageIsNone_764b0dfc',
-    imageIsScaleWidthHeight: 'imageIsScaleWidthHeight_764b0dfc',
-    imageIsScaleWidth: 'imageIsScaleWidth_764b0dfc',
-    imageIsScaleHeight: 'imageIsScaleHeight_764b0dfc',
+    root: 'root_34b11ef1',
+    rootIsMaximizeFrame: 'rootIsMaximizeFrame_34b11ef1',
+    image: 'image_34b11ef1',
+    imageIsLoaded: 'imageIsLoaded_34b11ef1',
+    imageIsCenter: 'imageIsCenter_34b11ef1',
+    imageIsContain: 'imageIsContain_34b11ef1',
+    imageIsCover: 'imageIsCover_34b11ef1',
+    imageIsLandscape: 'imageIsLandscape_34b11ef1',
+    imageIsPortrait: 'imageIsPortrait_34b11ef1',
+    imageIsNone: 'imageIsNone_34b11ef1',
+    imageIsScaleWidthHeight: 'imageIsScaleWidthHeight_34b11ef1',
+    imageIsScaleWidth: 'imageIsScaleWidth_34b11ef1',
+    imageIsScaleHeight: 'imageIsScaleHeight_34b11ef1',
 };
-load_themed_styles_1.loadStyles([{ "rawString": ".root_764b0dfc{overflow:hidden}.rootIsMaximizeFrame_764b0dfc{height:100%;width:100%}.image_764b0dfc{display:block;opacity:0}.image_764b0dfc.imageIsLoaded_764b0dfc{opacity:1}.imageIsCenter_764b0dfc,.imageIsContain_764b0dfc,.imageIsCover_764b0dfc{position:relative;top:50%}[dir=ltr] .imageIsCenter_764b0dfc,[dir=ltr] .imageIsContain_764b0dfc,[dir=ltr] .imageIsCover_764b0dfc{left:50%}[dir=rtl] .imageIsCenter_764b0dfc,[dir=rtl] .imageIsContain_764b0dfc,[dir=rtl] .imageIsCover_764b0dfc{right:50%}html[dir=ltr] .imageIsCenter_764b0dfc,html[dir=ltr] .imageIsContain_764b0dfc,html[dir=ltr] .imageIsCover_764b0dfc{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}html[dir=rtl] .imageIsCenter_764b0dfc,html[dir=rtl] .imageIsContain_764b0dfc,html[dir=rtl] .imageIsCover_764b0dfc{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}.imageIsContain_764b0dfc.imageIsLandscape_764b0dfc{width:100%;height:auto}.imageIsContain_764b0dfc.imageIsPortrait_764b0dfc{height:100%;width:auto}.imageIsCover_764b0dfc.imageIsLandscape_764b0dfc{height:100%;width:auto}.imageIsCover_764b0dfc.imageIsPortrait_764b0dfc{width:100%;height:auto}.imageIsNone_764b0dfc{height:auto;width:auto}.imageIsScaleWidthHeight_764b0dfc{height:100%;width:100%}.imageIsScaleWidth_764b0dfc{height:auto;width:100%}.imageIsScaleHeight_764b0dfc{height:100%;width:auto}" }]);
+load_themed_styles_1.loadStyles([{ "rawString": ".root_34b11ef1{overflow:hidden}.rootIsMaximizeFrame_34b11ef1{height:100%;width:100%}.image_34b11ef1{display:block;opacity:0}.image_34b11ef1.imageIsLoaded_34b11ef1{opacity:1}.imageIsCenter_34b11ef1,.imageIsContain_34b11ef1,.imageIsCover_34b11ef1{position:relative;top:50%}[dir=ltr] .imageIsCenter_34b11ef1,[dir=ltr] .imageIsContain_34b11ef1,[dir=ltr] .imageIsCover_34b11ef1{left:50%}[dir=rtl] .imageIsCenter_34b11ef1,[dir=rtl] .imageIsContain_34b11ef1,[dir=rtl] .imageIsCover_34b11ef1{right:50%}html[dir=ltr] .imageIsCenter_34b11ef1,html[dir=ltr] .imageIsContain_34b11ef1,html[dir=ltr] .imageIsCover_34b11ef1{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}html[dir=rtl] .imageIsCenter_34b11ef1,html[dir=rtl] .imageIsContain_34b11ef1,html[dir=rtl] .imageIsCover_34b11ef1{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}.imageIsContain_34b11ef1.imageIsLandscape_34b11ef1{width:100%;height:auto}.imageIsContain_34b11ef1.imageIsPortrait_34b11ef1{height:100%;width:auto}.imageIsCover_34b11ef1.imageIsLandscape_34b11ef1{height:100%;width:auto}.imageIsCover_34b11ef1.imageIsPortrait_34b11ef1{width:100%;height:auto}.imageIsNone_34b11ef1{height:auto;width:auto}.imageIsScaleWidthHeight_34b11ef1{height:100%;width:100%}.imageIsScaleWidth_34b11ef1{height:auto;width:100%}.imageIsScaleHeight_34b11ef1{height:100%;width:auto}" }]);
 module.exports = styles;
 /* tslint:enable */ 
 
+//# sourceMappingURL=Image.scss.js.map
 
 
 /***/ }),
@@ -13109,6 +13210,7 @@ var Label = (function (_super) {
 }(Utilities_1.BaseComponent));
 exports.Label = Label;
 
+//# sourceMappingURL=Label.js.map
 
 
 /***/ }),
@@ -13120,14 +13222,15 @@ exports.Label = Label;
 /* tslint:disable */
 var load_themed_styles_1 = __webpack_require__(5);
 var styles = {
-    root: 'root_612ef1ce',
-    isRequired: 'isRequired_612ef1ce',
-    isDisabled: 'isDisabled_612ef1ce',
+    root: 'root_68fbc541',
+    isRequired: 'isRequired_68fbc541',
+    isDisabled: 'isDisabled_68fbc541',
 };
-load_themed_styles_1.loadStyles([{ "rawString": ".root_612ef1ce{font-size:14px;font-weight:400;box-sizing:border-box;box-shadow:none;margin:0;padding:0;color:" }, { "theme": "neutralPrimary", "defaultValue": "#333333" }, { "rawString": ";box-sizing:border-box;display:block;padding:5px 0;word-wrap:break-word;overflow-wrap:break-word}.isRequired_612ef1ce::after{content:' *';color:" }, { "theme": "error", "defaultValue": "#a80000" }, { "rawString": "}.isDisabled_612ef1ce{color:" }, { "theme": "neutralTertiary", "defaultValue": "#a6a6a6" }, { "rawString": "}" }]);
+load_themed_styles_1.loadStyles([{ "rawString": ".root_68fbc541{font-size:14px;font-weight:400;box-sizing:border-box;box-shadow:none;margin:0;padding:0;color:" }, { "theme": "neutralPrimary", "defaultValue": "#333333" }, { "rawString": ";box-sizing:border-box;display:block;padding:5px 0;word-wrap:break-word;overflow-wrap:break-word}.isRequired_68fbc541::after{content:' *';color:" }, { "theme": "error", "defaultValue": "#a80000" }, { "rawString": "}.isDisabled_68fbc541{color:" }, { "theme": "neutralTertiary", "defaultValue": "#a6a6a6" }, { "rawString": "}" }]);
 module.exports = styles;
 /* tslint:enable */ 
 
+//# sourceMappingURL=Label.scss.js.map
 
 
 /***/ }),
@@ -13142,6 +13245,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(126));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -13153,13 +13257,14 @@ __export(__webpack_require__(126));
 /* tslint:disable */
 var load_themed_styles_1 = __webpack_require__(5);
 var styles = {
-    rootIsFixed: 'rootIsFixed_1b3ee0c3',
-    content: 'content_1b3ee0c3',
+    rootIsFixed: 'rootIsFixed_b0d413ca',
+    content: 'content_b0d413ca',
 };
-load_themed_styles_1.loadStyles([{ "rawString": ".rootIsFixed_1b3ee0c3{position:fixed;z-index:1000000;top:0;left:0;width:100vw;height:100vh;visibility:hidden}.content_1b3ee0c3{visibility:visible}" }]);
+load_themed_styles_1.loadStyles([{ "rawString": ".rootIsFixed_b0d413ca{position:fixed;z-index:1000000;top:0;left:0;width:100vw;height:100vh;visibility:hidden}.content_b0d413ca{visibility:visible}" }]);
 module.exports = styles;
 /* tslint:enable */ 
 
+//# sourceMappingURL=Layer.scss.js.map
 
 
 /***/ }),
@@ -13194,6 +13299,7 @@ var LayerHost = (function (_super) {
 }(Utilities_1.BaseComponent));
 exports.LayerHost = LayerHost;
 
+//# sourceMappingURL=LayerHost.js.map
 
 
 /***/ }),
@@ -13209,6 +13315,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(45));
 __export(__webpack_require__(130));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -13419,6 +13526,7 @@ tslib_1.__decorate([
 ], Pivot.prototype, "_renderLinkContent", null);
 exports.Pivot = Pivot;
 
+//# sourceMappingURL=Pivot.js.map
 
 
 /***/ }),
@@ -13430,23 +13538,24 @@ exports.Pivot = Pivot;
 /* tslint:disable */
 var load_themed_styles_1 = __webpack_require__(5);
 var styles = {
-    root: 'root_6be1c81e',
-    links: 'links_6be1c81e',
-    link: 'link_6be1c81e',
-    text: 'text_6be1c81e',
-    count: 'count_6be1c81e',
-    icon: 'icon_6be1c81e',
-    linkIsSelected: 'linkIsSelected_6be1c81e',
-    linkIsDisabled: 'linkIsDisabled_6be1c81e',
-    linkIsOverflow: 'linkIsOverflow_6be1c81e',
-    ellipsis: 'ellipsis_6be1c81e',
-    rootIsLarge: 'rootIsLarge_6be1c81e',
-    rootIsTabs: 'rootIsTabs_6be1c81e',
+    root: 'root_4725fc67',
+    links: 'links_4725fc67',
+    link: 'link_4725fc67',
+    text: 'text_4725fc67',
+    count: 'count_4725fc67',
+    icon: 'icon_4725fc67',
+    linkIsSelected: 'linkIsSelected_4725fc67',
+    linkIsDisabled: 'linkIsDisabled_4725fc67',
+    linkIsOverflow: 'linkIsOverflow_4725fc67',
+    ellipsis: 'ellipsis_4725fc67',
+    rootIsLarge: 'rootIsLarge_4725fc67',
+    rootIsTabs: 'rootIsTabs_4725fc67',
 };
-load_themed_styles_1.loadStyles([{ "rawString": ".root_6be1c81e{box-sizing:border-box;box-shadow:none;margin:0;padding:0;font-size:14px;font-weight:400;position:relative;color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": ";white-space:nowrap}.links_6be1c81e{font-size:0;height:40px;list-style-type:none;padding:0;white-space:nowrap}.root_6be1c81e .link_6be1c81e{color:" }, { "theme": "neutralPrimary", "defaultValue": "#333333" }, { "rawString": ";display:inline-block;font-size:14px;font-weight:400;line-height:40px;padding:0 8px;text-align:center;position:relative;background-color:transparent;border:0}[dir=ltr] .root_6be1c81e .link_6be1c81e{margin-right:8px}[dir=rtl] .root_6be1c81e .link_6be1c81e{margin-left:8px}.root_6be1c81e .link_6be1c81e:hover{cursor:pointer}.root_6be1c81e .link_6be1c81e:focus{outline:0}.root_6be1c81e .link_6be1c81e::before{background-color:transparent;bottom:0;content:'';height:2px;left:8px;position:absolute;right:8px;transition:background-color 267ms cubic-bezier(.1,.25,.75,.9)}.root_6be1c81e .link_6be1c81e::after{color:transparent;content:attr(title);display:block;font-weight:700;height:1px;overflow:hidden;visibility:hidden}.root_6be1c81e .link_6be1c81e .count_6be1c81e,.root_6be1c81e .link_6be1c81e .text_6be1c81e{display:inline-block;vertical-align:top}html[dir=ltr] .root_6be1c81e .link_6be1c81e .icon_6be1c81e+.text_6be1c81e{margin-left:4px}html[dir=rtl] .root_6be1c81e .link_6be1c81e .icon_6be1c81e+.text_6be1c81e{margin-right:4px}html[dir=ltr] .root_6be1c81e .link_6be1c81e .count_6be1c81e{margin-left:4px}html[dir=rtl] .root_6be1c81e .link_6be1c81e .count_6be1c81e{margin-right:4px}.root_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e{font-weight:600}.root_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e::before{box-sizing:border-box;border-bottom:2px solid " }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}@media screen and (-ms-high-contrast:active){.root_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e::before{border-bottom-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}}@media screen and (-ms-high-contrast:black-on-white){.root_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e::before{border-bottom-color:" }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}}.root_6be1c81e .link_6be1c81e.linkIsDisabled_6be1c81e{color:" }, { "theme": "neutralTertiary", "defaultValue": "#a6a6a6" }, { "rawString": "}.ms-Fabric.is-focusVisible .link_6be1c81e:focus{outline:1px solid " }, { "theme": "neutralSecondaryAlt", "defaultValue": "#767676" }, { "rawString": "}.link_6be1c81e.linkIsOverflow_6be1c81e{color:" }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}.link_6be1c81e.linkIsOverflow_6be1c81e.linkIsSelected_6be1c81e{color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.link_6be1c81e.linkIsOverflow_6be1c81e:focus:not(.linkIsSelected_6be1c81e),.link_6be1c81e.linkIsOverflow_6be1c81e:hover:not(.linkIsSelected_6be1c81e){color:" }, { "theme": "neutralDark", "defaultValue": "#212121" }, { "rawString": "}.link_6be1c81e.linkIsOverflow_6be1c81e:active{color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.ellipsis_6be1c81e{font-size:15px;position:relative;top:0}.root_6be1c81e.rootIsLarge_6be1c81e .link_6be1c81e{font-size:17px}.root_6be1c81e.rootIsLarge_6be1c81e .link_6be1c81e.linkIsOverflow_6be1c81e::after{font-size:17px}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e{height:40px;line-height:40px;background-color:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": ";padding:0 10px;vertical-align:top}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e::-moz-focus-inner{border:0}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e{outline:transparent}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e{position:relative}.ms-Fabric.is-focusVisible .root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e:focus:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid " }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}[dir=ltr] .root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e{margin-right:0}[dir=rtl] .root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e{margin-left:0}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e:focus:not(.linkIsSelected_6be1c81e):not(.linkIsOverflow_6be1c81e),.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e:hover:not(.linkIsSelected_6be1c81e):not(.linkIsOverflow_6be1c81e){color:" }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e:active{color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";background-color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e{background-color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": ";color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";font-weight:300}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e::before{background-color:transparent;transition:none;position:absolute;top:0;left:0;right:0;bottom:0;content:'';height:auto}@media screen and (-ms-high-contrast:active){.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e::before{border:1px solid " }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}}@media screen and (-ms-high-contrast:black-on-white){.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e::before{border:1px solid " }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsOverflow_6be1c81e:focus:not(.linkIsSelected_6be1c81e),.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsOverflow_6be1c81e:hover:not(.linkIsSelected_6be1c81e){background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsOverflow_6be1c81e:active{background-color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.ms-Fabric.is-focusVisible .root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e:focus:before{height:auto;background:0 0;transition:none}@media screen and (-ms-high-contrast:active){.root_6be1c81e.rootIsTabs_6be1c81e .link_6be1c81e.linkIsSelected_6be1c81e{font-weight:600}}" }]);
+load_themed_styles_1.loadStyles([{ "rawString": ".root_4725fc67{box-sizing:border-box;box-shadow:none;margin:0;padding:0;font-size:14px;font-weight:400;position:relative;color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": ";white-space:nowrap}.links_4725fc67{font-size:0;height:40px;list-style-type:none;padding:0;white-space:nowrap}.root_4725fc67 .link_4725fc67{color:" }, { "theme": "neutralPrimary", "defaultValue": "#333333" }, { "rawString": ";display:inline-block;font-size:14px;font-weight:400;line-height:40px;padding:0 8px;text-align:center;position:relative;background-color:transparent;border:0}[dir=ltr] .root_4725fc67 .link_4725fc67{margin-right:8px}[dir=rtl] .root_4725fc67 .link_4725fc67{margin-left:8px}.root_4725fc67 .link_4725fc67:hover{cursor:pointer}.root_4725fc67 .link_4725fc67:focus{outline:0}.root_4725fc67 .link_4725fc67::before{background-color:transparent;bottom:0;content:'';height:2px;left:8px;position:absolute;right:8px;transition:background-color 267ms cubic-bezier(.1,.25,.75,.9)}.root_4725fc67 .link_4725fc67::after{color:transparent;content:attr(title);display:block;font-weight:700;height:1px;overflow:hidden;visibility:hidden}.root_4725fc67 .link_4725fc67 .count_4725fc67,.root_4725fc67 .link_4725fc67 .text_4725fc67{display:inline-block;vertical-align:top}html[dir=ltr] .root_4725fc67 .link_4725fc67 .icon_4725fc67+.text_4725fc67{margin-left:4px}html[dir=rtl] .root_4725fc67 .link_4725fc67 .icon_4725fc67+.text_4725fc67{margin-right:4px}html[dir=ltr] .root_4725fc67 .link_4725fc67 .count_4725fc67{margin-left:4px}html[dir=rtl] .root_4725fc67 .link_4725fc67 .count_4725fc67{margin-right:4px}.root_4725fc67 .link_4725fc67.linkIsSelected_4725fc67{font-weight:600}.root_4725fc67 .link_4725fc67.linkIsSelected_4725fc67::before{box-sizing:border-box;border-bottom:2px solid " }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}@media screen and (-ms-high-contrast:active){.root_4725fc67 .link_4725fc67.linkIsSelected_4725fc67::before{border-bottom-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}}@media screen and (-ms-high-contrast:black-on-white){.root_4725fc67 .link_4725fc67.linkIsSelected_4725fc67::before{border-bottom-color:" }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}}.root_4725fc67 .link_4725fc67.linkIsDisabled_4725fc67{color:" }, { "theme": "neutralTertiary", "defaultValue": "#a6a6a6" }, { "rawString": "}.ms-Fabric.is-focusVisible .link_4725fc67:focus{outline:1px solid " }, { "theme": "neutralSecondaryAlt", "defaultValue": "#767676" }, { "rawString": "}.link_4725fc67.linkIsOverflow_4725fc67{color:" }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}.link_4725fc67.linkIsOverflow_4725fc67.linkIsSelected_4725fc67{color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.link_4725fc67.linkIsOverflow_4725fc67:focus:not(.linkIsSelected_4725fc67),.link_4725fc67.linkIsOverflow_4725fc67:hover:not(.linkIsSelected_4725fc67){color:" }, { "theme": "neutralDark", "defaultValue": "#212121" }, { "rawString": "}.link_4725fc67.linkIsOverflow_4725fc67:active{color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.ellipsis_4725fc67{font-size:15px;position:relative;top:0}.root_4725fc67.rootIsLarge_4725fc67 .link_4725fc67{font-size:17px}.root_4725fc67.rootIsLarge_4725fc67 .link_4725fc67.linkIsOverflow_4725fc67::after{font-size:17px}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67{height:40px;line-height:40px;background-color:" }, { "theme": "neutralLighter", "defaultValue": "#f4f4f4" }, { "rawString": ";padding:0 10px;vertical-align:top}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67::-moz-focus-inner{border:0}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67{outline:transparent}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67{position:relative}.ms-Fabric.is-focusVisible .root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67:focus:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;border:1px solid " }, { "theme": "neutralSecondary", "defaultValue": "#666666" }, { "rawString": "}[dir=ltr] .root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67{margin-right:0}[dir=rtl] .root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67{margin-left:0}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67:focus:not(.linkIsSelected_4725fc67):not(.linkIsOverflow_4725fc67),.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67:hover:not(.linkIsSelected_4725fc67):not(.linkIsOverflow_4725fc67){color:" }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67:active{color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";background-color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsSelected_4725fc67{background-color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": ";color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": ";font-weight:300}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsSelected_4725fc67::before{background-color:transparent;transition:none;position:absolute;top:0;left:0;right:0;bottom:0;content:'';height:auto}@media screen and (-ms-high-contrast:active){.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsSelected_4725fc67::before{border:1px solid " }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}}@media screen and (-ms-high-contrast:black-on-white){.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsSelected_4725fc67::before{border:1px solid " }, { "theme": "black", "defaultValue": "#000000" }, { "rawString": "}}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsOverflow_4725fc67:focus:not(.linkIsSelected_4725fc67),.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsOverflow_4725fc67:hover:not(.linkIsSelected_4725fc67){background-color:" }, { "theme": "white", "defaultValue": "#ffffff" }, { "rawString": "}.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsOverflow_4725fc67:active{background-color:" }, { "theme": "themePrimary", "defaultValue": "#0078d7" }, { "rawString": "}.ms-Fabric.is-focusVisible .root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67:focus:before{height:auto;background:0 0;transition:none}@media screen and (-ms-high-contrast:active){.root_4725fc67.rootIsTabs_4725fc67 .link_4725fc67.linkIsSelected_4725fc67{font-weight:600}}" }]);
 module.exports = styles;
 /* tslint:enable */ 
 
+//# sourceMappingURL=Pivot.scss.js.map
 
 
 /***/ }),
@@ -13464,6 +13573,7 @@ var PivotItem_1 = __webpack_require__(46);
 exports.PivotItem = PivotItem_1.PivotItem;
 __export(__webpack_require__(22));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -13538,6 +13648,7 @@ tslib_1.__decorate([
 ], Popup.prototype, "_onKeyDown", null);
 exports.Popup = Popup;
 
+//# sourceMappingURL=Popup.js.map
 
 
 /***/ }),
@@ -13552,6 +13663,7 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(135));
 
+//# sourceMappingURL=index.js.map
 
 
 /***/ }),
@@ -14108,6 +14220,7 @@ var positioningFunctions;
 })(positioningFunctions = exports.positioningFunctions || (exports.positioningFunctions = {}));
 var _a, _b, _c, _d;
 
+//# sourceMappingURL=positioning.js.map
 
 
 /***/ }),

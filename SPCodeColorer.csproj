@@ -42,62 +42,59 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Content\fabric.min.css" />
-    <Content Include="Images\spcc16x16.png" />
-    <Content Include="Images\spcc32x32.png" />
-    <Content Include="Pages\App.aspx" />
-    <Content Include="Pages\Default.aspx" />
-    <Content Include="Scripts\react-dom.min.js" />
-    <Content Include="Scripts\react.min.js" />
+    <Content Include="content\fabric.min.css" />
+    <Content Include="images\spcc16x16.png" />
+    <Content Include="images\spcc32x32.png" />
+    <Content Include="pages\App.aspx" />
+    <Content Include="pages\Default.aspx" />
+    <Content Include="scripts\react-dom.min.js" />
+    <Content Include="scripts\react.min.js" />
     <Content Include="SpccRibbonCustomAction\Elements.xml">
       <OpcRelationship>feature-elementmanifest</OpcRelationship>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Pages\SharePointProjectItem.spdata">
+    <None Include="pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{99e532ed-cc8c-45ec-89f3-5ea0262b77ff}</SharePointProjectItemId>
     </None>
-    <Content Include="Pages\Elements.xml" />
-    <None Include="SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{bfad08a6-a778-42bf-9371-9ffa139b32e9}</SharePointProjectItemId>
-    </None>
+    <Content Include="pages\Elements.xml" />
     <None Include="SpccRibbonCustomAction\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{44112837-ced1-4a48-b7bd-f343f6b4db26}</SharePointProjectItemId>
     </None>
     <None Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\SharePointProjectItem.spdata">
+    <None Include="scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{927b5575-c92c-489f-a4df-b1af10c94379}</SharePointProjectItemId>
     </None>
-    <Content Include="Scripts\Elements.xml" />
-    <Content Include="Scripts\bundle.js" />
+    <Content Include="scripts\Elements.xml" />
+    <Content Include="scripts\bundle.js" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\SharePointProjectItem.spdata">
+    <None Include="content\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7159ba7e-3294-4248-86ba-c864c5ad7ea1}</SharePointProjectItemId>
     </None>
-    <Content Include="Content\Elements.xml" />
+    <Content Include="content\Elements.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\appicon.png">
+    <Content Include="images\appicon.png">
       <OpcRelationship>manifest-icon</OpcRelationship>
     </Content>
-    <Content Include="Images\Elements.xml" />
-    <None Include="Images\SharePointProjectItem.spdata">
+    <Content Include="images\Elements.xml" />
+    <None Include="images\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{0cdab0ac-3cfd-4472-b01a-fa0dea8a4379}</SharePointProjectItemId>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Package\Package.package">
+    <None Include="package\Package.package">
       <PackageId>{1ea3bb8b-5699-458c-a10a-0a7d4ac51c6c}</PackageId>
     </None>
-    <None Include="Package\Package.Template.xml">
+    <None Include="package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\SPCodeColorerFeature\SPCodeColorerFeature.feature">
+    <None Include="features\SPCodeColorerFeature\SPCodeColorerFeature.feature">
       <FeatureId>{cb531a39-97da-4b8a-b1d8-9e7094430c08}</FeatureId>
     </None>
-    <None Include="Features\SPCodeColorerFeature\SPCodeColorerFeature.Template.xml">
+    <None Include="features\SPCodeColorerFeature\SPCodeColorerFeature.Template.xml">
       <DependentUpon>SPCodeColorerFeature.feature</DependentUpon>
     </None>
   </ItemGroup>
@@ -107,8 +104,8 @@
     </AppManifestFile>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Components\App.tsx" />
-    <TypeScriptCompile Include="Components\NavigationTabs.tsx" />
+    <TypeScriptCompile Include="components\App.tsx" />
+    <TypeScriptCompile Include="components\NavigationTabs.tsx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -117,9 +114,9 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(SolutionDir)..\node_modules\react\dist\react.min.js" "$(SolutionDir)\Scripts" /d /f /y
-xcopy "$(SolutionDir)..\node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\Scripts" /d /f /y
-xcopy "$(SolutionDir)..\node_modules\office-ui-fabric-react\dist\css\fabric.min.css" "$(SolutionDir)\Content" /d /f /y
+    <PostBuildEvent>xcopy "$(SolutionDir)node_modules\react\dist\react.min.js" "$(SolutionDir)\scripts" /d /f /y
+xcopy "$(SolutionDir)node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\scripts" /d /f /y
+xcopy "$(SolutionDir)node_modules\office-ui-fabric-core\dist\css\fabric.min.css" "$(SolutionDir)\content" /d /f /y
 </PostBuildEvent>
   </PropertyGroup>
 </Project>

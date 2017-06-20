@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
 	<Module Name="Content">
-		<File Path="Content\fabric.min.css" Url="Content/fabric.min.css" ReplaceContent="TRUE" />
+		<File Path="content\fabric.min.css" Url="Content/fabric.min.css" ReplaceContent="TRUE" />
 	</Module>
 </Elements>

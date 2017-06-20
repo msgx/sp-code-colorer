@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-	<Module Name="Images">
-		<File Path="Images\appicon.png" Url="Images/appicon.png" ReplaceContent="TRUE" />
-    <File Path="Images\spcc16x16.png" Url="Images/spcc16x16.png" ReplaceContent="TRUE" />
-    <File Path="Images\spcc32x32.png" Url="Images/spcc32x32.png" ReplaceContent="TRUE" />
-  </Module>
-</Elements>

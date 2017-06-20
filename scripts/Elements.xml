@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="Scripts">
+		<File Path="scripts\bundle.js" Url="Scripts/bundle.js" ReplaceContent="TRUE" />
+    <File Path="scripts\react.min.js" Url="Scripts/react.min.js" ReplaceContent="TRUE" />
+    <File Path="scripts\react-dom.min.js" Url="Scripts/react-dom.min.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
