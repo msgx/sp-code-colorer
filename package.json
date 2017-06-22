@@ -9,7 +9,7 @@
   "dependencies": {
     "@types/react": "^15.0.29",
     "@types/react-dom": "^15.5.0",
-    "office-ui-fabric-core": "5.0.1",
+    "office-ui-fabric-core": "^5.1.0",
     "office-ui-fabric-react": "^4.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
