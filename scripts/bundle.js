@@ -5039,12 +5039,29 @@ var TabHtml = exports.TabHtml = function (_React$Component) {
 		value: function render() {
 			return React.createElement(
 				"div",
-				{ className: "spcc-tabcontent" },
-				React.createElement(_TextField.TextField, {
-					label: "You can copy the following HTML representation of the code:",
-					multiline: true, rows: 10, resizable: false
-				}),
-				React.createElement(_Button.PrimaryButton, { text: "Copy to clipboard" })
+				{ className: "ms-Grid" },
+				React.createElement(
+					"div",
+					{ className: "ms-Grid-row" },
+					React.createElement(
+						"div",
+						{ className: "ms-Grid-col ms-u-sm12" },
+						React.createElement(_TextField.TextField, { id: "spccHtml",
+							label: "Here you can copy HTML representation of your code:",
+							multiline: true,
+							resizable: false
+						})
+					)
+				),
+				React.createElement(
+					"div",
+					{ className: "ms-Grid-row" },
+					React.createElement(
+						"div",
+						{ className: "ms-Grid-col ms-u-sm12" },
+						React.createElement(_Button.PrimaryButton, { text: "Copy to clipboard" })
+					)
+				)
 			);
 		}
 	}]);
@@ -5110,7 +5127,7 @@ var TabPreview = exports.TabPreview = function (_React$Component) {
 		value: function render() {
 			return React.createElement(
 				"div",
-				{ className: "spcc-tabcontent ms-Grid" },
+				{ className: "ms-Grid" },
 				React.createElement(
 					"div",
 					{ className: "ms-Grid-row" },
@@ -5218,18 +5235,32 @@ var TabSource = exports.TabSource = function (_React$Component) {
 		value: function render() {
 			return React.createElement(
 				"div",
-				{ className: "spcc-tabcontent" },
-				React.createElement(_TextField.TextField, {
-					id: "spccSource",
-					label: "Code:",
-					placeholder: "Type or paste your source code here",
-					maxLength: 16384,
-					multiline: true, rows: 10, resizable: false,
-					required: true,
-					value: this.props.source,
-					onChanged: this.handleChangeSource
-				}),
-				React.createElement(_Button.PrimaryButton, { text: "Preview" })
+				{ className: "ms-Grid" },
+				React.createElement(
+					"div",
+					{ className: "ms-Grid-row" },
+					React.createElement(
+						"div",
+						{ className: "ms-Grid-col ms-u-sm12" },
+						React.createElement(_TextField.TextField, { id: "spccSource",
+							label: "Code:",
+							placeholder: "Type or paste your source code here",
+							multiline: true,
+							resizable: false,
+							value: this.props.source,
+							onChanged: this.handleChangeSource
+						})
+					)
+				),
+				React.createElement(
+					"div",
+					{ className: "ms-Grid-row" },
+					React.createElement(
+						"div",
+						{ className: "ms-Grid-col ms-u-sm12" },
+						React.createElement(_Button.PrimaryButton, { text: "Preview" })
+					)
+				)
 			);
 		}
 	}]);
@@ -10108,7 +10139,7 @@ var App = function (_React$Component) {
 		value: function render() {
 			return React.createElement(
 				_Fabric.Fabric,
-				{ className: "spccFabric" },
+				null,
 				React.createElement(
 					_Pivot.Pivot,
 					null,
@@ -10122,7 +10153,7 @@ var App = function (_React$Component) {
 					),
 					React.createElement(
 						_Pivot.PivotItem,
-						{ linkText: "Preview" },
+						{ linkText: "Highlight" },
 						React.createElement(_TabPreview.TabPreview, {
 							source: this.state.source,
 							language: this.state.language,

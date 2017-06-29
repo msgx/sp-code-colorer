@@ -6,7 +6,7 @@ import { Highlighter } from "./Highlighter";
 export class TabPreview extends React.Component<any, any> {
 	render() {
 		return (
-			<div className="spcc-tabcontent ms-Grid">
+			<div className="ms-Grid">
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm6">
 						<Dropdown

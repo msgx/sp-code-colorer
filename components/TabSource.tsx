@@ -5,18 +5,24 @@ import { PrimaryButton } from "office-ui-fabric-react/lib/Button";
 export class TabSource extends React.Component<any, any> {
 	render() {
 		return (
-			<div className="spcc-tabcontent">
-				<TextField
-					id="spccSource"
-					label="Code:"
-					placeholder="Type or paste your source code here"
-					maxLength={16384}
-					multiline rows={10} resizable={false}
-					required
-					value={this.props.source}
-					onChanged={this.handleChangeSource}
-				/>
-				<PrimaryButton text="Preview" />
+			<div className="ms-Grid">
+				<div className="ms-Grid-row">
+					<div className="ms-Grid-col ms-u-sm12">
+						<TextField id="spccSource"
+							label="Code:"
+							placeholder="Type or paste your source code here"
+							multiline
+							resizable={false}
+							value={this.props.source}
+							onChanged={this.handleChangeSource}
+						/>
+					</div>
+				</div>
+				<div className="ms-Grid-row">
+					<div className="ms-Grid-col ms-u-sm12">
+						<PrimaryButton text="Preview" />
+					</div>
+				</div>
 			</div>
 		);
 	}

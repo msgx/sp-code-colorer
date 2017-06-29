@@ -15,7 +15,7 @@ class App extends React.Component<any, any> {
 
 	render() {
 		return (
-			<Fabric className="spccFabric">
+			<Fabric>
 				<Pivot>
 					<PivotItem linkText="Source">
 						<TabSource
@@ -23,7 +23,7 @@ class App extends React.Component<any, any> {
 							onChangeSource={this.handleChangeSource}
 						/>
 					</PivotItem>
-					<PivotItem linkText="Preview">
+					<PivotItem linkText="Highlight">
 						<TabPreview
 							source={this.state.source}
 							language={this.state.language}

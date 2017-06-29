@@ -1,6 +1,7 @@
 #Layout
-- Autoheight for <textarea> on 'Source' and 'HTML' tabs (and non-resizable by user)
-- Autoheight for preview <div> on 'Preview' (with scrolling if needed)
+- More accurate autoheight for <textarea> on 'Source' and 'HTML' tabs
+- Autoheight for preview <div> on 'Preview' (scrollbar appears only if needed)
+- Configure highlight.js to use spaces (always) instead of tabs
 
 #Limits?
 - Source code size in bytes/characters?
@@ -36,6 +37,7 @@
   Of course Admin.aspx should also check if user has web administrator rights on the site.
 
 #Building/bundling
+- Get rid of warnings (onLoad, 64 warnings in the console)
 - How to update DataURL links for the icons? Gulp? On demand / automatically
 - How to minify bundled JS?
 - (?) Dev/Prod configurations
