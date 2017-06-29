@@ -1,0 +1,9 @@
+#spccPreview {
+	padding: 8px;
+	margin-bottom: 8px;
+	border: 1px solid #eee;
+}
+
+#spccPreview > pre {
+	margin: 0;
+}

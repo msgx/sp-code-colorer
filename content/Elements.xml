@@ -2,5 +2,18 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
 	<Module Name="Content">
 		<File Path="content\fabric.min.css" Url="Content/fabric.min.css" ReplaceContent="TRUE" />
+		<File Path="content\app.css" Url="Content/app.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\default.css" Url="Content/hljs/default.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\atom-one-dark.css" Url="Content/hljs/atom-one-dark.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\atom-one-light.css" Url="Content/hljs/atom-one-light.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\darcula.css" Url="Content/hljs/darcula.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\foundation.css" Url="Content/hljs/foundation.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\github.css" Url="Content/hljs/github.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\monokai.css" Url="Content/hljs/monokai.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\obsidian.css" Url="Content/hljs/obsidian.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\solarized-dark.css" Url="Content/hljs/solarized-dark.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\solarized-light.css" Url="Content/hljs/solarized-light.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\vs.css" Url="Content/hljs/vs.css" ReplaceContent="TRUE" />
+		<File Path="content\hljs\vs2015.css" Url="Content/hljs/vs2015.css" ReplaceContent="TRUE" />
 	</Module>
 </Elements>

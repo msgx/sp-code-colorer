@@ -1,10 +1,6 @@
-#Three areas
-1.	Input area for the code (plain-text)
-2.	Preview with colored code
-3.	HTML view
-How to display this areas?
-- One below another (mobile friendly?)
-- One "under" another, allowing to switch between views by usung tabs, for example
+#Layout
+- Autoheight for <textarea> on 'Source' and 'HTML' tabs (and non-resizable by user)
+- Autoheight for preview <div> on 'Preview' (with scrolling if needed)
 
 #Limits?
 - Source code size in bytes/characters?
@@ -14,7 +10,7 @@ How to display this areas?
 
 #How to open the add-in?
 - From the Ribbon while editing page
-? From the add-in home page (dedicated link to open dialog)
+- (?) Also from the add-in homepage (dedicated link to open dialog)
 
 #User actions
 - Insert source code (Ctrl+V, paste)
@@ -28,13 +24,9 @@ How to display this areas?
 - Copy from Preview as rich-text that can be pasted with OOB WYSIWYG functionality
 - Copy as HTML code to paste into page's source code (advanced scenario?)
 
-Do we need to prepare the source code somehow? For example, smart quotes, autoindent, etc. Maybe JS-library can do it already.
-
-Frameworks & libraries: jQuery, Office UI Fabric, React, ClipboardJS, HighlightJS
-
-! Localization
-
-Do we need to wrap HTML-version of generated code with <code> tag?
+#Localization
+- See ReactJS documentation
+- Title of the add-in is not localizable (English only)
 
 #Add-in configuration page
 - Do we need it at all? Do we have any options to configure out of main window of the add-in?
@@ -43,11 +35,12 @@ Do we need to wrap HTML-version of generated code with <code> tag?
   BTW, Default.aspx is quite a good option: we can show help/how-to on the page for all users, adding "Configure" link for admins only.
   Of course Admin.aspx should also check if user has web administrator rights on the site.
 
-How to update DataURL links for the icons? Gulp? On demand / automatically
+#Building/bundling
+- How to update DataURL links for the icons? Gulp? On demand / automatically
+- How to minify bundled JS?
+- (?) Dev/Prod configurations
 
 #Dialog box
 - Keyboard shortcut to open Code Colorer?
 - How to close a dialog box by pressing Esc?
 - Use CloseCustomActionDialogNoRefresh (https://dev.office.com/sharepoint/docs/sp-add-ins/sharepoint-add-ins-ux-design-guidelines)
-
-? Use Webpack to bundle JS-file with only needed parts of UIFabric, React, etc.

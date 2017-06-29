@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "main": "./scripts/bundle.js",
   "scripts": {
-    "build": "webpack",
-    "test": "webpack-dev-server --hot --inline --colors --progress"
+    "build": "webpack"
   },
   "dependencies": {
     "@types/react": "^15.0.29",
     "@types/react-dom": "^15.5.0",
+    "highlight.js": "^9.12.0",
     "office-ui-fabric-core": "^5.1.0",
     "office-ui-fabric-react": "^4.8.1",
     "react": "^15.6.1",
@@ -17,13 +17,13 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "react-hot-loader": "^1.3.1",
     "source-map-loader": "^0.2.1",
     "typescript": "^2.3.4",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack": "^2.6.1"
   },
   "description": "SharePoint Add-in that helps editors with highlighting of source code.",
   "keywords": [
