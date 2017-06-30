@@ -68,6 +68,7 @@ class App extends React.Component<any, any> {
 									<DefaultButton
 										text="Copy to clipboard"
 										iconProps={{ iconName: "Copy" }}
+										disabled
 										className="spcc-button" />
 								</div>
 							</div>
@@ -87,6 +88,7 @@ class App extends React.Component<any, any> {
 									<DefaultButton
 										text="Copy to clipboard"
 										iconProps={{ iconName: "Copy" }}
+										disabled
 										className="spcc-button" />
 								</div>
 							</div>

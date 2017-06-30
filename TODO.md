@@ -1,3 +1,8 @@
+#Common tasks
+- Highlighter component: process possible exceptions from highlight.js library.
+- Implement 'Copy to clipboard' functionality.
+- Implement HTML tab.
+
 #Layout
 - Configure highlight.js to use spaces (always) instead of tabs
 - Hide 'Copy to clipboard' button if source is empty (Preview and HTML tabs)

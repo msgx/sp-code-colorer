@@ -8,16 +8,16 @@ export class ThemeSelector extends React.Component<any, any> {
 				label="Theme:"
 				options={[
 					{ key: "default", text: "Default" },
+					{ key: "darcula", text: "Darcula" },
 					{ key: "github", text: "GitHub" },
 					{ key: "atom-one-light", text: "Atom One Light" },
-					{ key: "vs", text: "Visual Studio Light" },
-					{ key: "foundation", text: "Foundation" },
-					{ key: "solarized-light", text: "Solarized Light" },
-					{ key: "darcula", text: "Darcula" },
 					{ key: "atom-one-dark", text: "Atom One Dark" },
+					{ key: "vs", text: "Visual Studio Light" },
 					{ key: "vs2015", text: "Visual Studio Dark" },
+					{ key: "foundation", text: "Foundation" },
 					{ key: "obsidian", text: "Obsidian" },
 					{ key: "monokai", text: "Monokai" },
+					{ key: "solarized-light", text: "Solarized Light" },
 					{ key: "solarized-dark", text: "Solarized Dark" }
 				]}
 				selectedKey={this.props.theme}
