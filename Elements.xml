@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <Module Name="RootModule">
-    <File Path="components\Highlighter.tsx" Url="components/Highlighter.tsx" ReplaceContent="TRUE" />
-    <File Path="components\LanguageSelector.tsx" Url="components/LanguageSelector.tsx" ReplaceContent="TRUE" />
-    <File Path="components\ThemeSelector.tsx" Url="components/ThemeSelector.tsx" ReplaceContent="TRUE" />
-  </Module>
-</Elements>

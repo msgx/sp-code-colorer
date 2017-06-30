@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
   <Files>
-    <ProjectItemFile Source="Elements.xml" Type="ElementManifest" />
     <ProjectItemFile Source="components\Highlighter.tsx" Target="components\" Type="ElementFile" />
     <ProjectItemFile Source="components\LanguageSelector.tsx" Target="components\" Type="ElementFile" />
     <ProjectItemFile Source="components\ThemeSelector.tsx" Target="components\" Type="ElementFile" />
