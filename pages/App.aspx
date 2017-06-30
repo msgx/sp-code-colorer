@@ -5,8 +5,8 @@
 <head>
 	<title>Code Colorer</title>
 	<link href="../Content/fabric.min.css" rel="stylesheet" />
-	<link href="../Content/app.css" rel="stylesheet" />
 	<link href="../Content/hljs/default.css" id="hljsThemeLink" rel="stylesheet" />
+	<link href="../Content/app.css" rel="stylesheet" />
 	<script src="../Scripts/react.min.js" type="text/javascript"></script>
 	<script src="../Scripts/react-dom.min.js" type="text/javascript"></script>
 </head>

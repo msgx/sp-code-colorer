@@ -49,7 +49,13 @@ class App extends React.Component<any, any> {
 	};
 
 	handleChangeTheme = (theme) => {
-		this.setState({ theme: theme });
+		if (/^[a-z\d\-]+$/.test(theme)) {
+			const link = document.getElementById("hljsThemeLink");
+			if (link) {
+				link.setAttribute("href", "../Content/hljs/" + theme + ".css");
+				this.setState({ theme: theme });
+			}
+		}
 	};
 }
 

@@ -5059,7 +5059,7 @@ var TabHtml = exports.TabHtml = function (_React$Component) {
 					React.createElement(
 						"div",
 						{ className: "ms-Grid-col ms-u-sm12" },
-						React.createElement(_Button.PrimaryButton, { text: "Copy to clipboard" })
+						React.createElement(_Button.DefaultButton, { text: "Copy to clipboard", icon: "Copy", className: "spcc-button" })
 					)
 				)
 			);
@@ -5146,7 +5146,7 @@ var TabPreview = exports.TabPreview = function (_React$Component) {
 						{ className: "ms-Grid-col ms-u-sm6" },
 						React.createElement(_Dropdown.Dropdown, {
 							label: "Theme:",
-							options: [{ key: "default", text: "(default)" }, { key: "monokai", text: "Monokai" }, { key: "dracula", text: "Dracula" }],
+							options: [{ key: "default", text: "Default" }, { key: "github", text: "GitHub" }, { key: "atom-one-light", text: "Atom One Light" }, { key: "vs", text: "Visual Studio Light" }, { key: "foundation", text: "Foundation" }, { key: "solarized-light", text: "Solarized Light" }, { key: "darcula", text: "Darcula" }, { key: "atom-one-dark", text: "Atom One Dark" }, { key: "vs2015", text: "Visual Studio Dark" }, { key: "obsidian", text: "Obsidian" }, { key: "monokai", text: "Monokai" }, { key: "solarized-dark", text: "Solarized Dark" }],
 							selectedKey: this.props.theme,
 							onChanged: this.handleChangeTheme
 						})
@@ -5170,7 +5170,7 @@ var TabPreview = exports.TabPreview = function (_React$Component) {
 					React.createElement(
 						"div",
 						{ className: "ms-Grid-col ms-u-sm12" },
-						React.createElement(_Button.PrimaryButton, { text: "Copy to clipboard" })
+						React.createElement(_Button.DefaultButton, { text: "Copy to clipboard", icon: "Copy", className: "spcc-button" })
 					)
 				)
 			);
@@ -5226,6 +5226,8 @@ var TabSource = exports.TabSource = function (_React$Component) {
 
 		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TabSource.__proto__ || Object.getPrototypeOf(TabSource)).call.apply(_ref, [this].concat(args))), _this), _this.handleChangeSource = function (text) {
 			_this.props.onChangeSource(text);
+		}, _this.handleClickHighlight = function () {
+			// go to next tab
 		}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
@@ -5257,7 +5259,12 @@ var TabSource = exports.TabSource = function (_React$Component) {
 					React.createElement(
 						"div",
 						{ className: "ms-Grid-col ms-u-sm12" },
-						React.createElement(_Button.PrimaryButton, { text: "Preview" })
+						React.createElement(_Button.DefaultButton, {
+							text: "Highlight",
+							icon: "Color",
+							className: "spcc-button",
+							onClick: this.handleClickHighlight
+						})
 					)
 				)
 			);
@@ -10129,7 +10136,13 @@ var App = function (_React$Component) {
 		}, _this.handleChangeLanguage = function (language) {
 			_this.setState({ language: language });
 		}, _this.handleChangeTheme = function (theme) {
-			_this.setState({ theme: theme });
+			if (/^[a-z\d\-]+$/.test(theme)) {
+				var link = document.getElementById("hljsThemeLink");
+				if (link) {
+					link.setAttribute("href", "../Content/hljs/" + theme + ".css");
+					_this.setState({ theme: theme });
+				}
+			}
 		}, _temp), _possibleConstructorReturn(_this, _ret);
 	}
 
@@ -10224,7 +10237,7 @@ var Highlighter = exports.Highlighter = function (_React$Component) {
 			var content;
 			var source = this.props.source;
 			var language = this.props.language || "auto";
-			if (source === null || source.match(/^\s*$/) !== null) {
+			if (source === null || /^\s*$/.test(source)) {
 				content = React.createElement(
 					"div",
 					{ className: "spcc-message" },
@@ -10246,7 +10259,6 @@ var Highlighter = exports.Highlighter = function (_React$Component) {
 					null,
 					React.createElement("code", { className: "hljs", dangerouslySetInnerHTML: { __html: hlObj.value } })
 				);
-				console.log("hljs detected language: ", hlObj.language);
 			}
 			return React.createElement(
 				"div",

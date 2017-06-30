@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dropdown } from "office-ui-fabric-react/lib/Dropdown";
-import { PrimaryButton } from "office-ui-fabric-react/lib/Button";
+import { DefaultButton } from "office-ui-fabric-react/lib/Button";
 import { Highlighter } from "./Highlighter";
 
 export class TabPreview extends React.Component<any, any> {
@@ -26,9 +26,18 @@ export class TabPreview extends React.Component<any, any> {
 						<Dropdown
 							label="Theme:"
 							options={[
-								{ key: "default", text: "(default)" },
+								{ key: "default", text: "Default" },
+								{ key: "github", text: "GitHub" },
+								{ key: "atom-one-light", text: "Atom One Light" },
+								{ key: "vs", text: "Visual Studio Light" },
+								{ key: "foundation", text: "Foundation" },
+								{ key: "solarized-light", text: "Solarized Light" },
+								{ key: "darcula", text: "Darcula" },
+								{ key: "atom-one-dark", text: "Atom One Dark" },
+								{ key: "vs2015", text: "Visual Studio Dark" },
+								{ key: "obsidian", text: "Obsidian" },
 								{ key: "monokai", text: "Monokai" },
-								{ key: "dracula", text: "Dracula" }
+								{ key: "solarized-dark", text: "Solarized Dark" }
 							]}
 							selectedKey={this.props.theme}
 							onChanged={this.handleChangeTheme}
@@ -45,7 +54,7 @@ export class TabPreview extends React.Component<any, any> {
 				</div>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm12">
-						<PrimaryButton text="Copy to clipboard" />
+						<DefaultButton text="Copy to clipboard" icon="Copy" className="spcc-button" />
 					</div>
 				</div>
 			</div>

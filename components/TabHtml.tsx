@@ -1,6 +1,6 @@
 import * as React from "react";
 import { TextField } from "office-ui-fabric-react/lib/TextField";
-import { PrimaryButton } from "office-ui-fabric-react/lib/Button";
+import { DefaultButton } from "office-ui-fabric-react/lib/Button";
 
 export class TabHtml extends React.Component<any, any> {
 	render() {
@@ -17,7 +17,7 @@ export class TabHtml extends React.Component<any, any> {
 				</div>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm12">
-						<PrimaryButton text="Copy to clipboard" />
+						<DefaultButton text="Copy to clipboard" icon="Copy" className="spcc-button" />
 					</div>
 				</div>
 			</div>

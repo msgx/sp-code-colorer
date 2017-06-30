@@ -6,11 +6,11 @@ export class Highlighter extends React.Component<any, any> {
 		var content;
 		const source = this.props.source;
 		const language = this.props.language || "auto";
-		if (source === null || source.match(/^\s*$/) !== null) {
+		if (source === null || /^\s*$/.test(source)) {
 			content = <div className="spcc-message">Provide us with a code on <strong>Source</strong> tab to see the result here.</div>;
 		}
 		else {
-			// if language === "auto"
+			//TODO: if language === "auto"
 			const hlObj = hljs.highlightAuto(source);
 			// else
 			// ...

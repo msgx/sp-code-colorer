@@ -1,7 +1,8 @@
 #Layout
-- More accurate autoheight for <textarea> on 'Source' and 'HTML' tabs
-- Autoheight for preview <div> on 'Preview' (scrollbar appears only if needed)
 - Configure highlight.js to use spaces (always) instead of tabs
+- Hide 'Copy to clipboard' button if source is empty (Preview and HTML tabs)
+- (?) Disable 'Language' and 'Theme' dropdowns if source is empty
+- (?) Make main navigation (Source/Highlight/HTML) more attractive/larger
 
 #Limits?
 - Source code size in bytes/characters?

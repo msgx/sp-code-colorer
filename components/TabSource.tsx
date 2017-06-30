@@ -1,6 +1,6 @@
 import * as React from "react";
 import { TextField } from "office-ui-fabric-react/lib/TextField";
-import { PrimaryButton } from "office-ui-fabric-react/lib/Button";
+import { DefaultButton } from "office-ui-fabric-react/lib/Button";
 
 export class TabSource extends React.Component<any, any> {
 	render() {
@@ -20,7 +20,12 @@ export class TabSource extends React.Component<any, any> {
 				</div>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm12">
-						<PrimaryButton text="Preview" />
+						<DefaultButton
+							text="Highlight"
+							icon="Color"
+							className="spcc-button"
+							onClick={this.handleClickHighlight}
+						/>
 					</div>
 				</div>
 			</div>
@@ -29,5 +34,9 @@ export class TabSource extends React.Component<any, any> {
 
 	handleChangeSource = (text) => {
 		this.props.onChangeSource(text);
+	};
+
+	handleClickHighlight = () => {
+		//TODO: go to next tab
 	};
 }
