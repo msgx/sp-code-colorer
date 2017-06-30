@@ -5160,8 +5160,7 @@ var TabPreview = exports.TabPreview = function (_React$Component) {
 						{ className: "ms-Grid-col ms-u-sm12" },
 						React.createElement(_Highlighter.Highlighter, {
 							source: this.props.source,
-							language: this.props.language,
-							theme: this.props.theme
+							language: this.props.language
 						})
 					)
 				),
@@ -10224,10 +10223,11 @@ var Highlighter = exports.Highlighter = function (_React$Component) {
 		value: function render() {
 			var content;
 			var source = this.props.source;
+			var language = this.props.language || "auto";
 			if (source === null || source.match(/^\s*$/) !== null) {
 				content = React.createElement(
-					"span",
-					null,
+					"div",
+					{ className: "spcc-message" },
 					"Provide us with a code on ",
 					React.createElement(
 						"strong",
@@ -10237,12 +10237,16 @@ var Highlighter = exports.Highlighter = function (_React$Component) {
 					" tab to see the result here."
 				);
 			} else {
+				// if language === "auto"
 				var hlObj = hljs.highlightAuto(source);
+				// else
+				// ...
 				content = React.createElement(
 					"pre",
 					null,
-					React.createElement("code", { dangerouslySetInnerHTML: { __html: hlObj.value } })
+					React.createElement("code", { className: "hljs", dangerouslySetInnerHTML: { __html: hlObj.value } })
 				);
+				console.log("hljs detected language: ", hlObj.language);
 			}
 			return React.createElement(
 				"div",

@@ -40,7 +40,6 @@ export class TabPreview extends React.Component<any, any> {
 						<Highlighter
 							source={this.props.source}
 							language={this.props.language}
-							theme={this.props.theme}
 						/>
 					</div>
 				</div>

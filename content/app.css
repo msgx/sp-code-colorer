@@ -1,18 +1,22 @@
-#spccPreview {
-	padding: 8px;
-	margin-bottom: 8px;
-	border: 1px solid #eee;
-}
-
-#spccPreview > pre {
-	margin: 0;
-}
-
 #spccSource, #spccHtml {
 	height: 60vh;
 }
 
 #spccPreview {
 	height: 55vh;
+	margin-bottom: 8px;
 	overflow: auto;
+	border: 1px solid #ccc;
+}
+
+#spccPreview > pre {
+	margin: 0;
+}
+
+.spcc-message {
+	margin: 8px;
+}
+
+.hljs {
+	overflow-x: hidden !important;
 }
