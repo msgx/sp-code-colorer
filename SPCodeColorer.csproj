@@ -123,9 +123,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="components\App.tsx" />
     <TypeScriptCompile Include="components\Highlighter.tsx" />
-    <TypeScriptCompile Include="components\TabHtml.tsx" />
-    <TypeScriptCompile Include="components\TabPreview.tsx" />
-    <TypeScriptCompile Include="components\TabSource.tsx" />
+    <TypeScriptCompile Include="components\LanguageSelector.tsx" />
+    <TypeScriptCompile Include="components\ThemeSelector.tsx" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

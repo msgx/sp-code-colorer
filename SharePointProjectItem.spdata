@@ -3,5 +3,7 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Type="ElementManifest" />
     <ProjectItemFile Source="components\Highlighter.tsx" Target="components\" Type="ElementFile" />
+    <ProjectItemFile Source="components\LanguageSelector.tsx" Target="components\" Type="ElementFile" />
+    <ProjectItemFile Source="components\ThemeSelector.tsx" Target="components\" Type="ElementFile" />
   </Files>
 </ProjectItem>
