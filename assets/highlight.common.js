@@ -9,7 +9,6 @@ hljs.registerLanguage("java", require("highlight.js/lib/languages/java"));
 hljs.registerLanguage("python", require("highlight.js/lib/languages/python"));
 hljs.registerLanguage("ruby", require("highlight.js/lib/languages/ruby"));
 hljs.registerLanguage("perl", require("highlight.js/lib/languages/perl"));
-hljs.registerLanguage("fsharp", require("highlight.js/lib/languages/fsharp"));
 hljs.registerLanguage("xml", require("highlight.js/lib/languages/xml"));
 hljs.registerLanguage("css", require("highlight.js/lib/languages/css"));
 hljs.registerLanguage("json", require("highlight.js/lib/languages/json"));

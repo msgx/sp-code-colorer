@@ -1,9 +1,9 @@
 #spccSource, #spccHtml {
-	height: 60vh;
+	height: 72vh;
 }
 
 #spccPreview {
-	max-height: 55vh;
+	max-height: 65vh;
 	margin-bottom: 8px;
 	overflow: auto;
 	border: 1px solid #ccc;

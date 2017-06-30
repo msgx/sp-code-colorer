@@ -17,7 +17,6 @@ export class LanguageSelector extends React.Component<any, any> {
 					{ key: "python", text: "Python" },
 					{ key: "ruby", text: "Ruby" },
 					{ key: "perl", text: "Perl" },
-					{ key: "fsharp", text: "F#" },
 					{ key: "xml", text: "XML, HTML" },
 					{ key: "css", text: "CSS" },
 					{ key: "json", text: "JSON" },
