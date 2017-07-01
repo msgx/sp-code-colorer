@@ -1,11 +1,15 @@
+body {
+	margin: 0;
+}
+
 #spccSource, #spccHtml {
-	height: 72vh;
+	height: calc(100vh - 60px);
 }
 
 #spccPreview {
-	max-height: 65vh;
-	margin-bottom: 8px;
+	height: calc(100vh - 131px);
 	overflow: auto;
+	margin-bottom: 8px;
 	border: 1px solid #ccc;
 }
 
@@ -13,12 +17,10 @@
 	margin: 0;
 }
 
-.spcc-message {
-	margin: 8px;
-}
-
 .spcc-button {
 	float: right;
+	margin-left: 16px;
+	margin-top: 4px;
 }
 
 .hljs {

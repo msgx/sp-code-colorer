@@ -121,8 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="components\App.tsx" />
-    <TypeScriptCompile Include="components\Highlighter.tsx" />
     <TypeScriptCompile Include="components\LanguageSelector.tsx" />
+    <TypeScriptCompile Include="components\TabHighlight.tsx" />
+    <TypeScriptCompile Include="components\TabSource.tsx" />
     <TypeScriptCompile Include="components\ThemeSelector.tsx" />
   </ItemGroup>
   <ItemGroup />
