@@ -1,21 +1,12 @@
 import * as React from "react";
-import * as hljs from "../assets/highlight.common";
-import { DefaultButton, PrimaryButton } from "office-ui-fabric-react/lib/Button";
-import { TextField } from "office-ui-fabric-react/lib/TextField";
-import { Checkbox } from "office-ui-fabric-react/lib/Checkbox";
+import * as hljs from "../assets/highlight.custom";
+import Clipboard from "clipboard/dist/clipboard";
+import { CommandButton } from "office-ui-fabric-react/lib/Button";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
 
 export class TabHighlight extends React.Component<any, any> {
-	state = {
-		asHtml: false
-	};
-
 	render() {
-		return this.state.asHtml ? this.htmlView() : this.highlighterView();
-	}
-
-	highlighterView() {
 		return (
 			<div className="ms-Grid">
 				<div className="ms-Grid-row">
@@ -37,49 +28,50 @@ export class TabHighlight extends React.Component<any, any> {
 						</div>
 					</div>
 				</div>
-				{this.footerRow()}
-			</div>
-		);
-	}
-
-	htmlView() {
-		return (
-			<div className="ms-Grid">
 				<div className="ms-Grid-row">
-					<div className="ms-Grid-col ms-u-sm12">
-						<TextField id="spccHtml"
-							value={this.getHighlightedCode()}
-							multiline
-							resizable={false} />
+					<div className="ms-Grid-col ms-u-sm4">
+						<CommandButton
+							text="Back to code"
+							iconProps={{ iconName: "PageLeft" }}
+							onClick={this.handleClickBack} />
+					</div>
+					<div className="ms-Grid-col ms-u-sm8">
+						<CommandButton id="cmdCopyRichText"
+							text="Copy as Rich Text"
+							iconProps={{ iconName: "Font" }}
+							className="spcc-button-right" />
+						<CommandButton id="cmdCopyHtml"
+							text="Copy as HTML"
+							iconProps={{ iconName: "Embed" }}
+							className="spcc-button-right" />
 					</div>
 				</div>
-				{this.footerRow()}
 			</div>
 		);
 	}
 
-	footerRow() {
-		return (
-			<div className="ms-Grid-row">
-				<div className="ms-Grid-col ms-u-sm4">
-					<Checkbox
-						label="HTML"
-						checked={this.state.asHtml}
-						onChange={this.handleChangeMode} />
-				</div>
-				<div className="ms-Grid-col ms-u-sm8">
-					<PrimaryButton
-						text="Copy to clipboard"
-						iconProps={{ iconName: "Copy" }}
-						className="spcc-button" />
-					<DefaultButton
-						text="Back to code"
-						iconProps={{ iconName: "Code" }}
-						className="spcc-button"
-						onClick={this.handleClickBack} />
-				</div>
-			</div>
-		);
+	componentDidMount() {
+		const btnCopyRichText = document.getElementById("cmdCopyRichText");
+		if (btnCopyRichText) {
+			const cbHtml = new Clipboard(btnCopyRichText, { target: this.getPreviewElement });
+			cbHtml.on("success", (e) => { console.log("Copy as Rich Text: SUCCESS"); }); //TODO: show success notification
+			cbHtml.on("error", (e) => { console.log("Copy as Rich Text: ERROR"); });     //TODO: show error notification
+		}
+		const btnCopyHtml = document.getElementById("cmdCopyHtml");
+		if (btnCopyHtml) {
+			const cbHtml = new Clipboard(btnCopyHtml, { text: this.getHtmlCode });
+			cbHtml.on("success", (e) => { console.log("Copy as HTML: SUCCESS"); }); //TODO: show success notification
+			cbHtml.on("error", (e) => { console.log("Copy as HTML: ERROR"); });     //TODO: show error notification
+		}
+	}
+
+	getPreviewElement() {
+		return document.getElementById("spccPreview");
+	}
+
+	getHtmlCode() {
+		const container = document.getElementById("spccPreview");
+		return container ? container.innerHTML : "";
 	}
 
 	getHighlightedCode() {
@@ -101,10 +93,6 @@ export class TabHighlight extends React.Component<any, any> {
 
 	handleChangeLanguage = (language) => {
 		this.props.onChangeLanguage(language);
-	};
-
-	handleChangeMode = (e, asHtml) => {
-		this.setState({ asHtml: asHtml });
 	};
 
 	handleClickBack = () => {

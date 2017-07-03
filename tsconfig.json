@@ -1,17 +1,16 @@
 {
 	"compilerOptions": {
+		"types": [ "react", "react-dom" ],
 		"module": "commonjs",
 		"target": "es5",
 		"jsx": "react",
 		"allowJs": true,
 		"strict": true,
+		"sourceMap": false,
+		"noEmitOnError": true,
 		"removeComments": true,
 		"newLine": "LF"
 	},
-	"include": [
-		"./components/**/*"
-	],
-	"exclude": [
-		"node_modules"
-	]
+	"include": [ "./components/**/*" ],
+	"compileOnSave": false
 }

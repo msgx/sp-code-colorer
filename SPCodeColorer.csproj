@@ -150,4 +150,7 @@ xcopy "$(SolutionDir)node_modules\highlight.js\styles\obsidian.css" "$(SolutionD
 xcopy "$(SolutionDir)node_modules\highlight.js\styles\solarized-dark.css" "$(SolutionDir)\content\hljs" /d /f /y
 xcopy "$(SolutionDir)node_modules\highlight.js\styles\vs2015.css" "$(SolutionDir)\content\hljs" /d /f /y</PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
 </Project>

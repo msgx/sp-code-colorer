@@ -8,6 +8,7 @@
   "dependencies": {
     "@types/react": "^15.0.29",
     "@types/react-dom": "^15.5.0",
+    "clipboard": "^1.7.1",
     "highlight.js": "^9.12.0",
     "office-ui-fabric-core": "^5.1.0",
     "office-ui-fabric-react": "^4.8.1",
