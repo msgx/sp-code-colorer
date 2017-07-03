@@ -5189,6 +5189,7 @@ var TabSource = exports.TabSource = function (_React$Component) {
 						{ className: "ms-Grid-col ms-u-sm12" },
 						React.createElement(_TextField.TextField, { id: "spccSource",
 							placeholder: "Type or paste your source code here",
+							autoFocus: true,
 							multiline: true,
 							resizable: false,
 							value: this.props.source,

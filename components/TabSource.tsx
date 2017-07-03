@@ -11,6 +11,7 @@ export class TabSource extends React.Component<any, any> {
 					<div className="ms-Grid-col ms-u-sm12">
 						<TextField id="spccSource"
 							placeholder="Type or paste your source code here"
+							autoFocus
 							multiline
 							resizable={false}
 							value={this.props.source}

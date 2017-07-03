@@ -1,7 +1,8 @@
 #Common tasks
 - Highlighter component: process possible exceptions from highlight.js library.
-- Implement 'Copy to clipboard' functionality.
-- Implement HTML tab.
+- How to fix the issue with background color? (only light themes with transparent background?)
+- Implement no-style colors (we cannot use CSS styles in result code).
+- Copy as Rich Text: clear selection on success.
 
 #Layout
 - Configure highlight.js to use spaces (always) instead of tabs
