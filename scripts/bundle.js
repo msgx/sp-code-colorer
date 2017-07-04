@@ -4997,7 +4997,7 @@ var TabHighlight = exports.TabHighlight = function (_React$Component) {
 			if (/^[a-z\d\-]+$/.test(theme)) {
 				var link = document.getElementById("hljsThemeLink");
 				if (link) {
-					link.setAttribute("href", "../Content/hljs/" + theme + ".css");
+					link.setAttribute("href", "../Content/themes/" + theme + ".css");
 					_this.props.onChangeTheme(theme);
 				}
 			}
@@ -10210,7 +10210,7 @@ var ThemeSelector = exports.ThemeSelector = function (_React$Component) {
 		value: function render() {
 			return React.createElement(_Dropdown.Dropdown, {
 				label: "Theme:",
-				options: [{ key: "default", text: "Default" }, { key: "darcula", text: "Darcula" }, { key: "github", text: "GitHub" }, { key: "atom-one-light", text: "Atom One Light" }, { key: "atom-one-dark", text: "Atom One Dark" }, { key: "vs", text: "Visual Studio Light" }, { key: "vs2015", text: "Visual Studio Dark" }, { key: "foundation", text: "Foundation" }, { key: "obsidian", text: "Obsidian" }, { key: "monokai", text: "Monokai" }, { key: "solarized-light", text: "Solarized Light" }, { key: "solarized-dark", text: "Solarized Dark" }],
+				options: [{ key: "default", text: "Default" }, { key: "vs", text: "Visual Studio" }, { key: "github", text: "GitHub" }, { key: "atom-one", text: "Atom One" }, { key: "idea", text: "IDEA" }, { key: "xcode", text: "Xcode" }, { key: "foundation", text: "Foundation" }, { key: "ascetic", text: "Ascetic" }, { key: "arduino", text: "Arduino" }, { key: "docco", text: "Docco" }],
 				selectedKey: this.props.theme,
 				onChanged: this.handleChangeTheme
 			});

@@ -4,17 +4,15 @@
     <ProjectItemFile Source="Elements.xml" Target="content\" Type="ElementManifest" />
     <ProjectItemFile Source="fabric.min.css" Target="content\" Type="ElementFile" />
     <ProjectItemFile Source="app.css" Target="content\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\default.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\atom-one-dark.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\atom-one-light.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\darcula.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\foundation.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\github.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\monokai.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\obsidian.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\solarized-dark.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\solarized-light.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\vs.css" Target="content\hljs\" Type="ElementFile" />
-    <ProjectItemFile Source="hljs\vs2015.css" Target="content\hljs\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\default.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\atom-one.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\foundation.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\github.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\vs.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\arduino.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\ascetic.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\idea.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\xcode.css" Target="content\themes\" Type="ElementFile" />
+    <ProjectItemFile Source="themes\docco.css" Target="content\themes\" Type="ElementFile" />
   </Files>
 </ProjectItem>

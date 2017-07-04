@@ -14,7 +14,7 @@ body {
 }
 
 #spccPreview > pre {
-	margin: 4px;
+	margin: 0;
 }
 
 .spcc-button-right {

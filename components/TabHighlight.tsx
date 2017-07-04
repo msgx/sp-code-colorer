@@ -85,7 +85,7 @@ export class TabHighlight extends React.Component<any, any> {
 		if (/^[a-z\d\-]+$/.test(theme)) {
 			const link = document.getElementById("hljsThemeLink");
 			if (link) {
-				link.setAttribute("href", "../Content/hljs/" + theme + ".css");
+				link.setAttribute("href", "../Content/themes/" + theme + ".css");
 				this.props.onChangeTheme(theme);
 			}
 		}

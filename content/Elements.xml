@@ -3,17 +3,15 @@
 	<Module Name="Content">
 		<File Path="content\fabric.min.css" Url="Content/fabric.min.css" ReplaceContent="TRUE" />
 		<File Path="content\app.css" Url="Content/app.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\default.css" Url="Content/hljs/default.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\atom-one-dark.css" Url="Content/hljs/atom-one-dark.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\atom-one-light.css" Url="Content/hljs/atom-one-light.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\darcula.css" Url="Content/hljs/darcula.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\foundation.css" Url="Content/hljs/foundation.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\github.css" Url="Content/hljs/github.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\monokai.css" Url="Content/hljs/monokai.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\obsidian.css" Url="Content/hljs/obsidian.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\solarized-dark.css" Url="Content/hljs/solarized-dark.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\solarized-light.css" Url="Content/hljs/solarized-light.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\vs.css" Url="Content/hljs/vs.css" ReplaceContent="TRUE" />
-		<File Path="content\hljs\vs2015.css" Url="Content/hljs/vs2015.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\default.css" Url="Content/themes/default.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\atom-one.css" Url="Content/themes/atom-one.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\foundation.css" Url="Content/themes/foundation.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\github.css" Url="Content/themes/github.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\vs.css" Url="Content/themes/vs.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\arduino.css" Url="Content/themes/arduino.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\ascetic.css" Url="Content/themes/ascetic.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\idea.css" Url="Content/themes/idea.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\xcode.css" Url="Content/themes/xcode.css" ReplaceContent="TRUE" />
+		<File Path="content\themes\docco.css" Url="Content/themes/docco.css" ReplaceContent="TRUE" />
 	</Module>
 </Elements>
