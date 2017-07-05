@@ -1,6 +1,6 @@
 import * as React from "react";
+import * as Clipboard from "clipboard";
 import * as hljs from "../assets/highlight.custom";
-import Clipboard from "clipboard/dist/clipboard";
 import { CommandButton } from "office-ui-fabric-react/lib/Button";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
@@ -53,33 +53,48 @@ export class TabHighlight extends React.Component<any, any> {
 	componentDidMount() {
 		const btnCopyRichText = document.getElementById("cmdCopyRichText");
 		if (btnCopyRichText) {
-			const cbHtml = new Clipboard(btnCopyRichText, { target: this.getPreviewElement });
-			cbHtml.on("success", (e) => { console.log("Copy as Rich Text: SUCCESS"); }); //TODO: show success notification
+			const cbHtml = new Clipboard(btnCopyRichText, { target: this.handleClickCopyRichText });
+			cbHtml.on("success", (e) => { e.clearSelection(); console.log("Copy as Rich Text: SUCCESS"); }); //TODO: show success notification + e.clearSelection();
 			cbHtml.on("error", (e) => { console.log("Copy as Rich Text: ERROR"); });     //TODO: show error notification
 		}
 		const btnCopyHtml = document.getElementById("cmdCopyHtml");
 		if (btnCopyHtml) {
-			const cbHtml = new Clipboard(btnCopyHtml, { text: this.getHtmlCode });
+			const cbHtml = new Clipboard(btnCopyHtml, { text: this.handleClickCopyHtml });
 			cbHtml.on("success", (e) => { console.log("Copy as HTML: SUCCESS"); }); //TODO: show success notification
 			cbHtml.on("error", (e) => { console.log("Copy as HTML: ERROR"); });     //TODO: show error notification
 		}
 	}
 
-	getPreviewElement() {
-		return document.getElementById("spccPreview");
-	}
-
-	getHtmlCode() {
-		const container = document.getElementById("spccPreview");
-		return container ? container.innerHTML : "";
-	}
-
-	getHighlightedCode() {
+	getHighlightedCode(): string {
 		const language = this.props.language || "auto";
 		hljs.configure({ tabReplace: "    " });
 		const hlObj = language === "auto" ? hljs.highlightAuto(this.props.source) : hljs.highlight(language, this.props.source);
 		return hljs.fixMarkup(hlObj.value);
 	}
+
+	handleClickCopyHtml = () => {
+		let html = "";
+		const container = document.getElementById("spccPreview");
+		const themeLink = document.getElementById("hljsThemeLink") as HTMLLinkElement;
+		if (container && themeLink) {
+			let clone = container.cloneNode(true) as HTMLElement;
+			const cssRules = (themeLink.sheet as CSSStyleSheet).cssRules;
+			for (let r = 0; r < cssRules.length; r++) {
+				let rule = cssRules[r] as CSSStyleRule;
+				let elements = clone.querySelectorAll(rule.selectorText);
+				for (let e = 0; e < elements.length; e++) {
+					let element = elements[e] as HTMLElement;
+					element.style.cssText += rule.style.cssText;
+				}
+			}
+			html = clone.innerHTML;
+		}
+		return html;
+	};
+
+	handleClickCopyRichText = () => {
+		return document.getElementById("spccPreview") as Element;
+	};
 
 	handleChangeTheme = (theme) => {
 		if (/^[a-z\d\-]+$/.test(theme)) {

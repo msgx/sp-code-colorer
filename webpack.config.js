@@ -10,8 +10,8 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{ test: /\.tsx?$/, exclude: /node_modules/, loader: "babel-loader" },
-			{ test: /\.js$/, exclude: /node_modules/, enforce: "pre", loader: "source-map-loader" }
+			{ test: /\.tsx?$/, loader: "ts-loader" },
+			{ test: /\.js$/, loader: "source-map-loader", enforce: "pre" }
 		]
 	},
 	externals: {
