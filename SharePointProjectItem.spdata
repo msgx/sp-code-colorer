@@ -6,5 +6,7 @@
     <ProjectItemFile Source="components\TabHighlight.tsx" Target="components\" Type="ElementFile" />
     <ProjectItemFile Source="components\TabSource.tsx" Target="components\" Type="ElementFile" />
     <ProjectItemFile Source="tsconfig.json" Type="ElementFile" />
+    <ProjectItemFile Source="README.md" Type="ElementFile" />
+    <ProjectItemFile Source="TODO.md" Type="ElementFile" />
   </Files>
 </ProjectItem>
