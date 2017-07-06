@@ -1,11 +1,14 @@
 import * as React from "react";
 import * as Clipboard from "clipboard";
+import * as Notyf from "notyf";
 import * as hljs from "../assets/highlight.custom";
 import { DefaultButton, PrimaryButton } from "office-ui-fabric-react/lib/Button";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
 
 export class TabHighlight extends React.Component<any, any> {
+	notyf = new Notyf({ delay: 1500 });
+
 	render() {
 		return (
 			<div className="ms-Grid">
@@ -51,14 +54,14 @@ export class TabHighlight extends React.Component<any, any> {
 		const btnCopyRichText = document.getElementById("cmdCopyRichText");
 		if (btnCopyRichText) {
 			const cbHtml = new Clipboard(btnCopyRichText, { target: this.handleClickCopyRichText });
-			cbHtml.on("success", (e) => { e.clearSelection(); console.log("Copy as Rich Text: SUCCESS"); }); //TODO: show success notification + e.clearSelection();
-			cbHtml.on("error", (e) => { console.log("Copy as Rich Text: ERROR"); });     //TODO: show error notification
+			cbHtml.on("success", this.handleCopySuccess);
+			cbHtml.on("error", this.handleCopyError);
 		}
 		const btnCopyHtml = document.getElementById("cmdCopyHtml");
 		if (btnCopyHtml) {
 			const cbHtml = new Clipboard(btnCopyHtml, { text: this.handleClickCopyHtml });
-			cbHtml.on("success", (e) => { console.log("Copy as HTML: SUCCESS"); }); //TODO: show success notification
-			cbHtml.on("error", (e) => { console.log("Copy as HTML: ERROR"); });     //TODO: show error notification
+			cbHtml.on("success", this.handleCopySuccess);
+			cbHtml.on("error", this.handleCopyError);
 		}
 	}
 
@@ -109,5 +112,14 @@ export class TabHighlight extends React.Component<any, any> {
 
 	handleClickBack = () => {
 		this.props.onChangeTab("source");
+	};
+
+	handleCopySuccess = (event) => {
+		event.clearSelection();
+		this.notyf.confirm("Code copied to clipboard");
+	};
+
+	handleCopyError = (event) => {
+		this.notyf.alert("Copy to clipboard failed");
 	};
 }
