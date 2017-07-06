@@ -4974,10 +4974,10 @@ var TabHighlight = (function (_super) {
                             React.createElement("code", { className: "hljs", dangerouslySetInnerHTML: { __html: this.getHighlightedCode() } }))))),
             React.createElement("div", { className: "ms-Grid-row" },
                 React.createElement("div", { className: "ms-Grid-col ms-u-sm4" },
-                    React.createElement(Button_1.CommandButton, { text: "Back to code", iconProps: { iconName: "PageLeft" }, onClick: this.handleClickBack })),
+                    React.createElement(Button_1.DefaultButton, { text: "Back to code", onClick: this.handleClickBack })),
                 React.createElement("div", { className: "ms-Grid-col ms-u-sm8" },
-                    React.createElement(Button_1.CommandButton, { id: "cmdCopyRichText", text: "Copy as Rich Text", iconProps: { iconName: "Font" }, className: "spcc-button-right" }),
-                    React.createElement(Button_1.CommandButton, { id: "cmdCopyHtml", text: "Copy as HTML", iconProps: { iconName: "Embed" }, className: "spcc-button-right" })))));
+                    React.createElement(Button_1.PrimaryButton, { id: "cmdCopyRichText", text: "Copy as Rich Text", className: "spcc-button-right" }),
+                    React.createElement(Button_1.PrimaryButton, { id: "cmdCopyHtml", text: "Copy as HTML", className: "spcc-button-right" })))));
     };
     TabHighlight.prototype.componentDidMount = function () {
         var btnCopyRichText = document.getElementById("cmdCopyRichText");
@@ -5044,7 +5044,7 @@ var TabSource = (function (_super) {
                     React.createElement(TextField_1.TextField, { id: "spccSource", placeholder: "Type or paste your source code here", autoFocus: true, multiline: true, resizable: false, value: this.props.source, onChanged: this.handleChangeText }))),
             React.createElement("div", { className: "ms-Grid-row" },
                 React.createElement("div", { className: "ms-Grid-col ms-u-sm12" },
-                    React.createElement(Button_1.CommandButton, { text: "Highlight", iconProps: { iconName: "Color" }, disabled: isSourceEmpty, className: "spcc-button-right", onClick: this.handleClickHighlight })))));
+                    React.createElement(Button_1.PrimaryButton, { text: "Highlight", disabled: isSourceEmpty, className: "spcc-button-right", onClick: this.handleClickHighlight })))));
     };
     return TabSource;
 }(React.Component));

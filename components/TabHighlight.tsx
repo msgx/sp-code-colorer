@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Clipboard from "clipboard";
 import * as hljs from "../assets/highlight.custom";
-import { CommandButton } from "office-ui-fabric-react/lib/Button";
+import { DefaultButton, PrimaryButton } from "office-ui-fabric-react/lib/Button";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
 
@@ -30,19 +30,16 @@ export class TabHighlight extends React.Component<any, any> {
 				</div>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm4">
-						<CommandButton
+						<DefaultButton
 							text="Back to code"
-							iconProps={{ iconName: "PageLeft" }}
 							onClick={this.handleClickBack} />
 					</div>
 					<div className="ms-Grid-col ms-u-sm8">
-						<CommandButton id="cmdCopyRichText"
+						<PrimaryButton id="cmdCopyRichText"
 							text="Copy as Rich Text"
-							iconProps={{ iconName: "Font" }}
 							className="spcc-button-right" />
-						<CommandButton id="cmdCopyHtml"
+						<PrimaryButton id="cmdCopyHtml"
 							text="Copy as HTML"
-							iconProps={{ iconName: "Embed" }}
 							className="spcc-button-right" />
 					</div>
 				</div>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CommandButton } from "office-ui-fabric-react/lib/Button";
+import { PrimaryButton } from "office-ui-fabric-react/lib/Button";
 import { TextField } from "office-ui-fabric-react/lib/TextField";
 
 export class TabSource extends React.Component<any, any> {
@@ -20,9 +20,8 @@ export class TabSource extends React.Component<any, any> {
 				</div>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm12">
-						<CommandButton
+						<PrimaryButton
 							text="Highlight"
-							iconProps={{ iconName: "Color" }}
 							disabled={isSourceEmpty}
 							className="spcc-button-right"
 							onClick={this.handleClickHighlight} />
