@@ -1,5 +1,5 @@
 {
-  "name": "sp.code-colorer",
+  "name": "sp-code-colorer",
   "version": "0.5.0",
   "main": "./scripts/bundle.js",
   "scripts": {
