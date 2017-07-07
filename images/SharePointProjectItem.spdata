@@ -5,5 +5,6 @@
     <ProjectItemFile Source="AppIcon.png" Target="images\" Type="ElementFile" />
     <ProjectItemFile Source="spcc16x16.png" Target="images\" Type="ElementFile" />
     <ProjectItemFile Source="spcc32x32.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="howto_ribbon.png" Target="images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

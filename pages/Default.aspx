@@ -5,16 +5,28 @@
 
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
 	<SharePoint:ScriptLink Name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
+	<link href="../Content/fabric.min.css" rel="stylesheet" />
 	<style type="text/css">
 		#s4-ribbonrow { display: none; }
+		.howto-img { border: 1px solid #e6e6e6; padding: 4px; }
 	</style>
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">How to use Code Colorer</asp:Content>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
-	<h1>Lorem ipsum</h1>
-	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-	<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
-	<p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+	<div class="ms-Fabric">
+		<p class="ms-font-m-plus">Code Colorer is a SharePoint add-in that allows to apply syntax highlighting to source code you provide.</p>
+		<p class="ms-font-m-plus">Editors and technical writers who work with SharePoint often need to insert pieces of source code into pages. For example, this is the case with maintaining Wiki based KB. Usually, they have to use external tools for syntax highlighting. Code Colorer allows to get highlighed code without switching to any other application or site.</p>
+		<p class="ms-font-m-plus">To get started with Code Colorer, put the page in edit mode.</p>
+		<p class="ms-font-m-plus">On the <strong>Format Text</strong> tab, you will find the <strong>Code</strong> group with the <strong>Highlight</strong> button.</p>
+		<div>
+			<img src="../Images/howto_ribbon.png" alt="Code Colorer button on the Ribbon" width="870" height="230" class="howto-img" />
+			<div class="ms-font-s">Code Colorer button on the Ribbon</div>
+		</div>
+		<p class="ms-font-m-plus">The dialog box opens. Here you can type or paste a source code. Click the <strong>Highlight</strong> button then.</p>
+		<p class="ms-font-m-plus">Code Colorer switches to highlight view where you can choose theme and language. In most cases, you don’t need to specify code language manually, autodetect does it for you. Use the <strong>Back to code</strong> button if you want to edit the code.</p>
+		<p class="ms-font-m-plus">When the code is highlighted as needed, copy it to clipboard by clicking <strong>Copy as HTML</strong> or <strong>Copy as Rich Text</strong>. Rich Text is useful for WYSIWYG editing, but HTML format allows you to control the HTML markup of the page.</p>
+		<p class="ms-font-m-plus">That’s all, just close the dialog box and paste the code from clipboard where you need it.</p>
+	</div>
 </asp:Content>
