@@ -4918,6 +4918,10 @@ var hljs = __webpack_require__(57);
 var Button_1 = __webpack_require__(14);
 var LanguageSelector_1 = __webpack_require__(191);
 var ThemeSelector_1 = __webpack_require__(192);
+var previewContainerId = "spccPreview";
+var cmdCopyRichTextId = "spccCopyRichText";
+var cmdCopyHtmlId = "spccCopyHtml";
+var hljsThemeLinkId = "hljsThemeLink";
 var TabHighlight = (function (_super) {
     __extends(TabHighlight, _super);
     function TabHighlight() {
@@ -4925,8 +4929,8 @@ var TabHighlight = (function (_super) {
         _this.notyf = new Notyf({ delay: 1500 });
         _this.handleClickCopyHtml = function () {
             var html = "";
-            var container = document.getElementById("spccPreview");
-            var themeLink = document.getElementById("hljsThemeLink");
+            var container = document.getElementById(previewContainerId);
+            var themeLink = document.getElementById(hljsThemeLinkId);
             if (container && themeLink) {
                 var clone = container.cloneNode(true);
                 var cssRules = themeLink.sheet.cssRules;
@@ -4943,16 +4947,10 @@ var TabHighlight = (function (_super) {
             return html;
         };
         _this.handleClickCopyRichText = function () {
-            return document.getElementById("spccPreview");
+            return document.getElementById(previewContainerId);
         };
         _this.handleChangeTheme = function (theme) {
-            if (/^[a-z\d\-]+$/.test(theme)) {
-                var link = document.getElementById("hljsThemeLink");
-                if (link) {
-                    link.setAttribute("href", "../Content/themes/" + theme + ".css");
-                    _this.props.onChangeTheme(theme);
-                }
-            }
+            _this.props.onChangeTheme(theme);
         };
         _this.handleChangeLanguage = function (language) {
             _this.props.onChangeLanguage(language);
@@ -4970,6 +4968,7 @@ var TabHighlight = (function (_super) {
         return _this;
     }
     TabHighlight.prototype.render = function () {
+        this.applyTheme();
         return (React.createElement("div", { className: "ms-Grid" },
             React.createElement("div", { className: "ms-Grid-row" },
                 React.createElement("div", { className: "ms-Grid-col ms-u-sm6" },
@@ -4978,28 +4977,36 @@ var TabHighlight = (function (_super) {
                     React.createElement(LanguageSelector_1.LanguageSelector, { language: this.props.language, onChange: this.handleChangeLanguage }))),
             React.createElement("div", { className: "ms-Grid-row" },
                 React.createElement("div", { className: "ms-Grid-col ms-u-sm12" },
-                    React.createElement("div", { id: "spccPreview" },
+                    React.createElement("div", { id: previewContainerId },
                         React.createElement("pre", null,
                             React.createElement("code", { className: "hljs", dangerouslySetInnerHTML: { __html: this.getHighlightedCode() } }))))),
             React.createElement("div", { className: "ms-Grid-row" },
                 React.createElement("div", { className: "ms-Grid-col ms-u-sm4" },
                     React.createElement(Button_1.DefaultButton, { text: "Back to code", onClick: this.handleClickBack })),
                 React.createElement("div", { className: "ms-Grid-col ms-u-sm8" },
-                    React.createElement(Button_1.PrimaryButton, { id: "cmdCopyRichText", text: "Copy as Rich Text", className: "spcc-button-right" }),
-                    React.createElement(Button_1.PrimaryButton, { id: "cmdCopyHtml", text: "Copy as HTML", className: "spcc-button-right" })))));
+                    React.createElement(Button_1.PrimaryButton, { id: cmdCopyRichTextId, text: "Copy as Rich Text", className: "spcc-button-right" }),
+                    React.createElement(Button_1.PrimaryButton, { id: cmdCopyHtmlId, text: "Copy as HTML", className: "spcc-button-right" })))));
     };
     TabHighlight.prototype.componentDidMount = function () {
-        var btnCopyRichText = document.getElementById("cmdCopyRichText");
+        var btnCopyRichText = document.getElementById(cmdCopyRichTextId);
         if (btnCopyRichText) {
             var cbHtml = new Clipboard(btnCopyRichText, { target: this.handleClickCopyRichText });
             cbHtml.on("success", this.handleCopySuccess);
             cbHtml.on("error", this.handleCopyError);
         }
-        var btnCopyHtml = document.getElementById("cmdCopyHtml");
+        var btnCopyHtml = document.getElementById(cmdCopyHtmlId);
         if (btnCopyHtml) {
             var cbHtml = new Clipboard(btnCopyHtml, { text: this.handleClickCopyHtml });
             cbHtml.on("success", this.handleCopySuccess);
             cbHtml.on("error", this.handleCopyError);
+        }
+    };
+    TabHighlight.prototype.applyTheme = function () {
+        if (/^[a-z\d\-]+$/.test(this.props.theme)) {
+            var link = document.getElementById(hljsThemeLinkId);
+            if (link) {
+                link.setAttribute("href", "../Content/themes/" + this.props.theme + ".css");
+            }
         }
     };
     TabHighlight.prototype.getHighlightedCode = function () {

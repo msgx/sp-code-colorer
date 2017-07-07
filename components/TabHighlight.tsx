@@ -6,10 +6,16 @@ import { DefaultButton, PrimaryButton } from "office-ui-fabric-react/lib/Button"
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
 
+const previewContainerId = "spccPreview";
+const cmdCopyRichTextId = "spccCopyRichText";
+const cmdCopyHtmlId = "spccCopyHtml";
+const hljsThemeLinkId = "hljsThemeLink";
+
 export class TabHighlight extends React.Component<any, any> {
 	notyf = new Notyf({ delay: 1500 });
 
 	render() {
+		this.applyTheme();
 		return (
 			<div className="ms-Grid">
 				<div className="ms-Grid-row">
@@ -26,7 +32,7 @@ export class TabHighlight extends React.Component<any, any> {
 				</div>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-u-sm12">
-						<div id="spccPreview">
+						<div id={previewContainerId}>
 							<pre><code className="hljs" dangerouslySetInnerHTML={{ __html: this.getHighlightedCode() }} /></pre>
 						</div>
 					</div>
@@ -38,10 +44,10 @@ export class TabHighlight extends React.Component<any, any> {
 							onClick={this.handleClickBack} />
 					</div>
 					<div className="ms-Grid-col ms-u-sm8">
-						<PrimaryButton id="cmdCopyRichText"
+						<PrimaryButton id={cmdCopyRichTextId}
 							text="Copy as Rich Text"
 							className="spcc-button-right" />
-						<PrimaryButton id="cmdCopyHtml"
+						<PrimaryButton id={cmdCopyHtmlId}
 							text="Copy as HTML"
 							className="spcc-button-right" />
 					</div>
@@ -51,17 +57,26 @@ export class TabHighlight extends React.Component<any, any> {
 	}
 
 	componentDidMount() {
-		const btnCopyRichText = document.getElementById("cmdCopyRichText");
+		const btnCopyRichText = document.getElementById(cmdCopyRichTextId);
 		if (btnCopyRichText) {
 			const cbHtml = new Clipboard(btnCopyRichText, { target: this.handleClickCopyRichText });
 			cbHtml.on("success", this.handleCopySuccess);
 			cbHtml.on("error", this.handleCopyError);
 		}
-		const btnCopyHtml = document.getElementById("cmdCopyHtml");
+		const btnCopyHtml = document.getElementById(cmdCopyHtmlId);
 		if (btnCopyHtml) {
 			const cbHtml = new Clipboard(btnCopyHtml, { text: this.handleClickCopyHtml });
 			cbHtml.on("success", this.handleCopySuccess);
 			cbHtml.on("error", this.handleCopyError);
+		}
+	}
+
+	applyTheme() {
+		if (/^[a-z\d\-]+$/.test(this.props.theme)) {
+			const link = document.getElementById(hljsThemeLinkId);
+			if (link) {
+				link.setAttribute("href", "../Content/themes/" + this.props.theme + ".css");
+			}
 		}
 	}
 
@@ -74,8 +89,8 @@ export class TabHighlight extends React.Component<any, any> {
 
 	handleClickCopyHtml = () => {
 		let html = "";
-		const container = document.getElementById("spccPreview");
-		const themeLink = document.getElementById("hljsThemeLink") as HTMLLinkElement;
+		const container = document.getElementById(previewContainerId);
+		const themeLink = document.getElementById(hljsThemeLinkId) as HTMLLinkElement;
 		if (container && themeLink) {
 			let clone = container.cloneNode(true) as HTMLElement;
 			const cssRules = (themeLink.sheet as CSSStyleSheet).cssRules;
@@ -93,17 +108,11 @@ export class TabHighlight extends React.Component<any, any> {
 	};
 
 	handleClickCopyRichText = () => {
-		return document.getElementById("spccPreview") as Element;
+		return document.getElementById(previewContainerId) as Element;
 	};
 
 	handleChangeTheme = (theme) => {
-		if (/^[a-z\d\-]+$/.test(theme)) {
-			const link = document.getElementById("hljsThemeLink");
-			if (link) {
-				link.setAttribute("href", "../Content/themes/" + theme + ".css");
-				this.props.onChangeTheme(theme);
-			}
-		}
+		this.props.onChangeTheme(theme);
 	};
 
 	handleChangeLanguage = (language) => {
