@@ -26,6 +26,10 @@
 		</div>
 		<p class="ms-font-m-plus">The dialog box opens. Here you can type or paste a source code. Click the <strong>Highlight</strong> button then.</p>
 		<p class="ms-font-m-plus">Code Colorer switches to highlight view where you can choose theme and language. In most cases, you don’t need to specify code language manually, autodetect does it for you. Use the <strong>Back to code</strong> button if you want to edit the code.</p>
+		<div>
+			<img src="../Images/howto_preview.png" alt="Code Colorer dialog box" width="842" height="667" />
+			<div class="ms-font-s">Code Colorer dialog box</div>
+		</div>
 		<p class="ms-font-m-plus">When the code is highlighted as needed, copy it to clipboard by clicking <strong>Copy as HTML</strong> or <strong>Copy as Rich Text</strong>. Rich Text is useful for WYSIWYG editing, but HTML format allows you to control the HTML markup of the page.</p>
 		<p class="ms-font-m-plus">That’s all, just close the dialog box and paste the code from clipboard where you need it.</p>
 	</div>

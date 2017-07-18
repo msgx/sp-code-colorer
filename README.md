@@ -1,6 +1,8 @@
 # SPCodeColorer
 SPCodeColorer is a SharePoint add-in that allows to apply syntax highlighting to source code you provide.
 
+![Code Colorer dialog box](images/howto_preview.png)
+
 Editors and technical writers who work with SharePoint often need to insert pieces of source code into pages. For example, this is the case with maintaining Wiki based KB. Usually, they have to use external tools for syntax highlighting. SPCodeColorer allows to get highlighed code without switching to any other application or site.
 
 ## Supported platforms
