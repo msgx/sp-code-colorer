@@ -1,5 +1,6 @@
-# npm locally installed packages
+# npm local packages and supporting files
 node_modules/
+package-lock.json
 
 # bundled modules and supporting files
 scripts/bundle.js
