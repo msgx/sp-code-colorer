@@ -19,31 +19,31 @@ export class TabHighlight extends React.Component<any, any> {
 		return (
 			<div className="ms-Grid">
 				<div className="ms-Grid-row">
-					<div className="ms-Grid-col ms-u-sm6">
+					<div className="ms-Grid-col ms-sm6">
 						<ThemeSelector
 							theme={this.props.theme}
 							onChange={this.handleChangeTheme} />
 					</div>
-					<div className="ms-Grid-col ms-u-sm6">
+					<div className="ms-Grid-col ms-sm6">
 						<LanguageSelector
 							language={this.props.language}
 							onChange={this.handleChangeLanguage} />
 					</div>
 				</div>
 				<div className="ms-Grid-row">
-					<div className="ms-Grid-col ms-u-sm12">
+					<div className="ms-Grid-col ms-sm12">
 						<div id={previewContainerId}>
 							<pre><code className="hljs" dangerouslySetInnerHTML={{ __html: this.getHighlightedCode() }} /></pre>
 						</div>
 					</div>
 				</div>
 				<div className="ms-Grid-row">
-					<div className="ms-Grid-col ms-u-sm4">
+					<div className="ms-Grid-col ms-sm4">
 						<DefaultButton
 							text="Back to code"
 							onClick={this.handleClickBack} />
 					</div>
-					<div className="ms-Grid-col ms-u-sm8">
+					<div className="ms-Grid-col ms-sm8">
 						<PrimaryButton id={cmdCopyRichTextId}
 							text="Copy as Rich Text"
 							className="spcc-button-right" />

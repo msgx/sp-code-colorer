@@ -8,7 +8,7 @@ export class TabSource extends React.Component<any, any> {
 		return (
 			<div className="ms-Grid">
 				<div className="ms-Grid-row">
-					<div className="ms-Grid-col ms-u-sm12">
+					<div className="ms-Grid-col ms-sm12">
 						<TextField id="spccSource"
 							placeholder="Type or paste your source code here"
 							autoFocus
@@ -19,7 +19,7 @@ export class TabSource extends React.Component<any, any> {
 					</div>
 				</div>
 				<div className="ms-Grid-row">
-					<div className="ms-Grid-col ms-u-sm12">
+					<div className="ms-Grid-col ms-sm12">
 						<PrimaryButton
 							text="Highlight"
 							disabled={isSourceEmpty}

@@ -13,7 +13,7 @@
     "clipboard": "^1.7.1",
     "highlight.js": "^9.12.0",
     "notyf": "^2.0.1",
-    "office-ui-fabric-core": "^5.1.0",
+    "office-ui-fabric-core": "^7.1.2",
     "office-ui-fabric-react": "^4.21.4",
     "react": "15.6.1",
     "react-dom": "15.6.1"

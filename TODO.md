@@ -9,7 +9,6 @@
 - How to implement Dev/Prod configurations?
 
 ## Issues
-- [ ] Fix layout class: ms-u-sm12 -> ms-sm12
 - [ ] Check if main browsers support Copy as Rich Text correctly.
 - [ ] Workaround for IE's dialog "Allow access to clipboard?"
 - [ ] Landing page (Default.aspx) should provide howto/help to users.

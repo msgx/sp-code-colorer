@@ -136,9 +136,9 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(SolutionDir)node_modules\react\dist\react.min.js" "$(SolutionDir)\scripts" /d /f /y
-xcopy "$(SolutionDir)node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\scripts" /d /f /y
-xcopy "$(SolutionDir)node_modules\office-ui-fabric-core\dist\css\fabric.min.css" "$(SolutionDir)\content" /d /f /y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(SolutionDir)node_modules\react\dist\react.min.js" "$(SolutionDir)\scripts" /f /y
+xcopy "$(SolutionDir)node_modules\react-dom\dist\react-dom.min.js" "$(SolutionDir)\scripts" /f /y
+xcopy "$(SolutionDir)node_modules\office-ui-fabric-core\dist\css\fabric.min.css" "$(SolutionDir)\content" /f /y</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
