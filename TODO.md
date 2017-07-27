@@ -3,7 +3,6 @@
 - Title of the add-in is not localizable (English only)
 
 ## Building/bundling
-- Move to webpack-dev-server
 - Get rid of warnings (onLoad, 64 warnings in the console)
 - How to update DataURL links for the icons? Gulp? On demand or automatically.
 - Webpack: minify bundled JS (and CSS?)
