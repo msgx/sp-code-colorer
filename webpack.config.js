@@ -15,5 +15,11 @@ module.exports = {
 	externals: {
 		"react": "React",
 		"react-dom": "ReactDOM"
+	},
+	devServer: {
+		port: 8080,
+		contentBase: __dirname,
+		clientLogLevel: "warning",
+		inline: true
 	}
 };

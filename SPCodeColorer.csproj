@@ -71,9 +71,6 @@
     </None>
     <Content Include="pages\Elements.xml" />
     <None Include="README.md" />
-    <None Include="SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{9dc5ae9c-f336-4814-9e8d-c6cdbb4924d6}</SharePointProjectItemId>
-    </None>
     <None Include="SpccRibbonCustomAction\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{44112837-ced1-4a48-b7bd-f343f6b4db26}</SharePointProjectItemId>
     </None>
