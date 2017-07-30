@@ -4,6 +4,11 @@
 <html>
 <head>
 	<title>Code Colorer</title>
+	<script type="text/javascript">
+		document.addEventListener("keydown", function (event) {
+			event.key === "Escape" && window.parent.postMessage("CloseCustomActionDialogNoRefresh", "*");
+		});
+	</script>
 	<link href="../Content/fabric.min.css" rel="stylesheet" />
 	<link href="../Content/themes/default.css" id="hljsThemeLink" rel="stylesheet" />
 	<link href="../Content/app.css" rel="stylesheet" />

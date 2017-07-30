@@ -1,16 +1,19 @@
-## Localization
-- See ReactJS documentation
-- Title of the add-in is not localizable (English only)
-
-## Building/bundling
-- Get rid of warnings (onLoad, 64 warnings in the console)
-- How to update DataURL links for the icons? Gulp? On demand or automatically.
-- Webpack: minify bundled JS (and CSS?)
-- How to implement Dev/Prod configurations?
-
-## Issues
+## Ongoing tasks
 - Check if main browsers support Copy as Rich Text correctly.
 - Workaround for IE's dialog "Allow access to clipboard?"
+- Check if another clipboard library is better: [clipboard.js](https://github.com/lgarron/clipboard.js)
+- Check if it's better to use Office UI Fabric's callouts instead of Notyf.
+
+## Localization
+- See React documentation
+- [Localize SharePoint Add-ins](https://dev.office.com/sharepoint/docs/sp-add-ins/localize-sharepoint-add-ins)
+- Just simple translations.json?
+
+## Building/bundling
+- Get rid of warnings (onLoad, 64 warnings in the console).
+- Webpack: How to implement Dev/Prod configurations?
+- Webpack Dev Server: Fix the issue with live reloading.
+- How to update DataURL links for the icons? Webpack with url-loader?
 
 ## Ways to open the add-in
 - [x] From the Ribbon while editing page
@@ -21,8 +24,3 @@
 - Final code size?
 - JS-library limits?
 - SharePoint limits? (e.g. WikiContent field)
-
-## Dialog box
-- How to close a dialog box on Esc?
-- Use CloseCustomActionDialogNoRefresh (https://dev.office.com/sharepoint/docs/sp-add-ins/sharepoint-add-ins-ux-design-guidelines)
-- Keyboard shortcut to open Code Colorer (if needed and possible)
