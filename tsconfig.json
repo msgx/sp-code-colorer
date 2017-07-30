@@ -11,6 +11,6 @@
 		"removeComments": true,
 		"newLine": "LF"
 	},
-	"include": [ "./components/**/*" ],
+	"include": [ "./src/components/**/*" ],
 	"compileOnSave": false
 }

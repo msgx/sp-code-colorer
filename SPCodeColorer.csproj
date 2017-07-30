@@ -66,6 +66,7 @@
       <OpcRelationship>feature-elementmanifest</OpcRelationship>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="src\highlight.custom.js" />
     <None Include="pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{99e532ed-cc8c-45ec-89f3-5ea0262b77ff}</SharePointProjectItemId>
     </None>
@@ -119,11 +120,11 @@
     </AppManifestFile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="components\App.tsx" />
-    <None Include="components\HighlightView.tsx" />
-    <None Include="components\LanguageSelector.tsx" />
-    <None Include="components\SourceView.tsx" />
-    <None Include="components\ThemeSelector.tsx" />
+    <None Include="src\components\App.tsx" />
+    <None Include="src\components\HighlightView.tsx" />
+    <None Include="src\components\LanguageSelector.tsx" />
+    <None Include="src\components\SourceView.tsx" />
+    <None Include="src\components\ThemeSelector.tsx" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Clipboard from "clipboard";
 import * as Notyf from "notyf";
-import * as hljs from "../assets/highlight.custom";
+import * as hljs from "../highlight.custom";
 import { CommandButton, PrimaryButton } from "office-ui-fabric-react/lib/Button";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
