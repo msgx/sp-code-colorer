@@ -1,39 +1,39 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Fabric } from "office-ui-fabric-react/lib/Fabric";
-import { TabSource } from "./TabSource";
-import { TabHighlight } from "./TabHighlight";
+import { SourceView } from "./SourceView";
+import { HighlightView } from "./HighlightView";
 
 class App extends React.Component<any, any> {
 	state = {
 		source: null,
 		theme: "default",
 		language: "auto",
-		tab: "source"
+		view: "source"
 	};
 
 	render() {
-		const tabContent = this.state.tab === "source" ?
-			<TabSource
+		const viewBody = this.state.view === "source" ?
+			<SourceView
 				source={this.state.source}
 				onSourceChanged={this.handleChangeSource}
-				onChangeTab={this.handleChangeTab} /> :
-			<TabHighlight
+				onChangeView={this.handleChangeView} /> :
+			<HighlightView
 				source={this.state.source}
 				theme={this.state.theme}
 				language={this.state.language}
 				onChangeTheme={this.handleChangeTheme}
 				onChangeLanguage={this.handleChangeLanguage}
-				onChangeTab={this.handleChangeTab} />;
-		return <Fabric>{tabContent}</Fabric>;
+				onChangeView={this.handleChangeView} />;
+		return <Fabric>{viewBody}</Fabric>;
 	}
 
 	handleChangeSource = (text) => {
 		this.setState({ source: text });
 	};
 
-	handleChangeTab = (tab) => {
-		this.setState({ tab: tab });
+	handleChangeView = (view) => {
+		this.setState({ view: view });
 	};
 
 	handleChangeLanguage = (language) => {

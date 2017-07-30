@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Clipboard from "clipboard";
 import * as Notyf from "notyf";
 import * as hljs from "../assets/highlight.custom";
-import { DefaultButton, PrimaryButton } from "office-ui-fabric-react/lib/Button";
+import { CommandButton, PrimaryButton } from "office-ui-fabric-react/lib/Button";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
 
@@ -11,7 +11,7 @@ const cmdCopyRichTextId = "spccCopyRichText";
 const cmdCopyHtmlId = "spccCopyHtml";
 const hljsThemeLinkId = "hljsThemeLink";
 
-export class TabHighlight extends React.Component<any, any> {
+export class HighlightView extends React.Component<any, any> {
 	notyf = new Notyf({ delay: 1500 });
 
 	render() {
@@ -22,12 +22,12 @@ export class TabHighlight extends React.Component<any, any> {
 					<div className="ms-Grid-col ms-sm6">
 						<ThemeSelector
 							theme={this.props.theme}
-							onChange={this.handleChangeTheme} />
+							onChange={this.props.onChangeTheme} />
 					</div>
 					<div className="ms-Grid-col ms-sm6">
 						<LanguageSelector
 							language={this.props.language}
-							onChange={this.handleChangeLanguage} />
+							onChange={this.props.onChangeLanguage} />
 					</div>
 				</div>
 				<div className="ms-Grid-row">
@@ -39,8 +39,9 @@ export class TabHighlight extends React.Component<any, any> {
 				</div>
 				<div className="ms-Grid-row">
 					<div className="ms-Grid-col ms-sm4">
-						<DefaultButton
+						<CommandButton
 							text="Back to code"
+							iconProps={{ iconName: "DoubleChevronLeftMed" }}
 							onClick={this.handleClickBack} />
 					</div>
 					<div className="ms-Grid-col ms-sm8">
@@ -111,16 +112,8 @@ export class TabHighlight extends React.Component<any, any> {
 		return document.getElementById(previewContainerId) as Element;
 	};
 
-	handleChangeTheme = (theme) => {
-		this.props.onChangeTheme(theme);
-	};
-
-	handleChangeLanguage = (language) => {
-		this.props.onChangeLanguage(language);
-	};
-
 	handleClickBack = () => {
-		this.props.onChangeTab("source");
+		this.props.onChangeView("source");
 	};
 
 	handleCopySuccess = (event) => {

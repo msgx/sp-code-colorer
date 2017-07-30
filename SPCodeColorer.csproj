@@ -119,11 +119,11 @@
     </AppManifestFile>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="components\App.tsx" />
-    <TypeScriptCompile Include="components\LanguageSelector.tsx" />
-    <TypeScriptCompile Include="components\TabHighlight.tsx" />
-    <TypeScriptCompile Include="components\TabSource.tsx" />
-    <TypeScriptCompile Include="components\ThemeSelector.tsx" />
+    <None Include="components\App.tsx" />
+    <None Include="components\HighlightView.tsx" />
+    <None Include="components\LanguageSelector.tsx" />
+    <None Include="components\SourceView.tsx" />
+    <None Include="components\ThemeSelector.tsx" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

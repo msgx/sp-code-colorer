@@ -2,7 +2,7 @@ import * as React from "react";
 import { PrimaryButton } from "office-ui-fabric-react/lib/Button";
 import { TextField } from "office-ui-fabric-react/lib/TextField";
 
-export class TabSource extends React.Component<any, any> {
+export class SourceView extends React.Component<any, any> {
 	render() {
 		const isSourceEmpty = this.props.source === null || /^\s*$/.test(this.props.source);
 		return (
@@ -15,7 +15,7 @@ export class TabSource extends React.Component<any, any> {
 							multiline
 							resizable={false}
 							value={this.props.source}
-							onChanged={this.handleChangeText} />
+							onChanged={this.props.onSourceChanged} />
 					</div>
 				</div>
 				<div className="ms-Grid-row">
@@ -23,19 +23,15 @@ export class TabSource extends React.Component<any, any> {
 						<PrimaryButton
 							text="Highlight"
 							disabled={isSourceEmpty}
-							className="spcc-button-right"
-							onClick={this.handleClickHighlight} />
+							onClick={this.handleClickHighlight}
+							className="spcc-button-right" />
 					</div>
 				</div>
 			</div>
 		);
 	}
 
-	handleChangeText = (text) => {
-		this.props.onSourceChanged(text);
-	};
-
 	handleClickHighlight = () => {
-		this.props.onChangeTab("highlight");
+		this.props.onChangeView("highlight");
 	};
 }

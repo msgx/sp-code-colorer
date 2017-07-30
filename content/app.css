@@ -20,6 +20,7 @@ body {
 .spcc-button-right {
 	float: right;
 	margin-left: 16px;
+	min-width: 160px !important;
 }
 
 .hljs {
