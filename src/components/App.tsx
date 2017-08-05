@@ -16,7 +16,7 @@ class App extends React.Component<any, any> {
 		const viewBody = this.state.view === "source" ?
 			<SourceView
 				source={this.state.source}
-				onSourceChanged={this.handleChangeSource}
+				onChangeSource={this.handleChangeSource}
 				onChangeView={this.handleChangeView} /> :
 			<HighlightView
 				source={this.state.source}
@@ -46,6 +46,4 @@ class App extends React.Component<any, any> {
 }
 
 let appContainer = document.getElementById("spccApp");
-if (appContainer) {
-	ReactDOM.render(<App />, appContainer);
-}
+appContainer && ReactDOM.render(<App />, appContainer);

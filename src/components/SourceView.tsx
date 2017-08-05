@@ -15,7 +15,7 @@ export class SourceView extends React.Component<any, any> {
 							multiline
 							resizable={false}
 							value={this.props.source}
-							onChanged={this.props.onSourceChanged} />
+							onChanged={this.props.onChangeSource} />
 					</div>
 				</div>
 				<div className="ms-Grid-row">

@@ -75,9 +75,7 @@ export class HighlightView extends React.Component<any, any> {
 	applyTheme() {
 		if (/^[a-z\d\-]+$/.test(this.props.theme)) {
 			const link = document.getElementById(hljsThemeLinkId);
-			if (link) {
-				link.setAttribute("href", "../Content/themes/" + this.props.theme + ".css");
-			}
+			link && link.setAttribute("href", "../Content/themes/" + this.props.theme + ".css");
 		}
 	}
 
